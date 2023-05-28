@@ -17,9 +17,15 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup(require("plugins"))
+require("lazy").setup("plugins")
 require("plugconfig.treesitter")
 require("plugconfig.zero")
 
 require("colours")
 
+if vim.g.started_by_firenvim == true then
+	vim.o.laststatus = 0
+else
+	vim.o.laststatus = 2
+	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+end
