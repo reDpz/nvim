@@ -142,4 +142,5 @@ return{
     end,
     dependencies = {'nvim-treesitter', 'L3MON4D3/LuaSnip'}, -- or require if not used so far
   },
+  { "lukas-reineke/indent-blankline.nvim" },
 }
