@@ -27,6 +27,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")
 require("plugconfig.treesitter")
 require("plugconfig.zero")
+require('plugconfig.cmp')
 
 require("colours")
 
