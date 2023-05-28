@@ -11,6 +11,7 @@ local lineBg = "#3c3836"
 -- vim highlights
 vim.api.nvim_set_hl(0, "LineNr", { fg = "#7c6f64", bg = lineBg })
 vim.api.nvim_set_hl(0, "Visual", { bg = "#d79921", fg = "#282828"})
+vim.api.nvim_set_hl(0, "Todo", { fg = "#282828", bg = "#fabd2f", italic = true, bold = true })
 
 -- syntax highlight
 vim.api.nvim_set_hl(0, "Comment", {fg = '#928374',italic = true} )
