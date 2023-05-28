@@ -1,3 +1,10 @@
+-- termgui
+vim.opt.termguicolors = true
+
+-- file tree
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 require("config")
 require("mappings")
 

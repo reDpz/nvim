@@ -20,5 +20,6 @@ vim.api.nvim_set_hl(0, "String", {fg = '#b8bb26', italic = true})
 -- diagnoistics
 vim.api.nvim_set_hl(0, "DiagnosticWarn", {fg = '#fe8019', bg = lineBg })
 vim.api.nvim_set_hl(0, "DiagnosticInfo", {fg = '#83a598', bg = lineBg })
+vim.api.nvim_set_hl(0, "DiagnosticsHint", {fg = '#8ec07c', bg = lineBg })
 vim.api.nvim_set_hl(0, "DiagnosticError", {fg = '#cc241d', bg = lineBg })
 vim.api.nvim_set_hl(0, "DiagnosticFloatingError", {fg = '#cc241d', bg = "none" })
