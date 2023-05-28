@@ -1,7 +1,7 @@
 return{
 	"folke/which-key.nvim",
 	{
-		"ellisonleao/gruvbox",
+		"morhetz/gruvbox",
 	},
 	{
 		"nvim-treesitter/nvim-treesitter",
