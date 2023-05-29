@@ -26,7 +26,7 @@
   "startup.nvim": { "branch": "master", "commit": "5295eabe35eb66d0b355ada0ca06ec8bdb8f9698" },
   "tabout.nvim": { "branch": "master", "commit": "0d275c8d25f32457e67b5c66d6ae43f26a61bce5" },
   "telescope.nvim": { "branch": "master", "commit": "c1a2af0af69e80e14e6b226d3957a064cd080805" },
-  "todo.nvim": { "branch": "master", "commit": "6bd31dfd64b2730b33aad89423a1055c22fe276a" },
+  "todo-comments.nvim": { "branch": "main", "commit": "09b0b17d824d2d56f02ff15967e8a2499a89c731" },
   "vimwiki": { "branch": "dev", "commit": "cd9cfd299ef148721eaef532021c53da3d595710" },
   "which-key.nvim": { "branch": "main", "commit": "e271c28118998c93a14d189af3395812a1aa646c" }
 }

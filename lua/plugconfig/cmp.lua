@@ -23,9 +23,9 @@ cmp.setup({
   mapping = cmp.mapping.preset.insert({
     ["<C-b>"] = cmp.mapping.scroll_docs(-4),
     ["<C-f>"] = cmp.mapping.scroll_docs(4),
-    ["<ESC>"] = cmp.mapping.abort(),
+    ["<C-ESC>"] = cmp.mapping.abort(),
     ["<CR>"] = cmp.mapping.confirm({ select = true }),
-    ["<C-c>"] = cmp.mapping(function(fallback)
+    ["<C-Space>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
         -- You could replace the expand_or_jumpable() calls with expand_or_locally_jumpable()

@@ -67,55 +67,8 @@ return{
 			vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 			vim.keymap.set('n', '<leader>gf', builtin.git_files, {})
 		end
-        },
-	  {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'nvim-tree/nvim-web-devicons', opt = true },
-    config = function()
-      require('lualine').setup {
-        options = {
-          icons_enabled = true,
-          theme = 'gruvbox',
-          component_separators = { left = '', right = '' },
-          section_separators = { left = '', right = '' },
-          disabled_filetypes = {
-            statusline = {},
-            winbar = {},
-          },
-          ignore_focus = {},
-          always_divide_middle = true,
-          globalstatus = false,
-          refresh = {
-            statusline = 1000,
-            tabline = 1000,
-            winbar = 1000,
-          }
-        },
-        sections = {
-          lualine_a = { 'mode' },
-          lualine_b = { 'branch', 'diff', 'diagnostics' },
-          lualine_c = { 'filename' },
-          lualine_x = { 'encoding', 'fileformat', 'filetype' },
-          lualine_y = { 'progress' },
-          lualine_z = { 'location' }
-        },
-        inactive_sections = {
-          lualine_a = {},
-          lualine_b = {},
-          lualine_c = { 'filename' },
-          lualine_x = { 'location' },
-          lualine_y = {},
-          lualine_z = {}
-        },
-        tabline = {},
-        winbar = {},
-        inactive_winbar = {},
-        extensions = {},
-      }
-    end,
-    lazy = false
   },
-  {
+	    {
     'abecodes/tabout.nvim',
     lazy = false,
     config = function()
@@ -142,5 +95,20 @@ return{
     end,
     dependencies = {'nvim-treesitter', 'L3MON4D3/LuaSnip'}, -- or require if not used so far
   },
-  { "lukas-reineke/indent-blankline.nvim" },
+  {
+	"lukas-reineke/indent-blankline.nvim",
+	config = function ()
+		require("indent_blankline").setup {
+				show_current_context = true,
+				show_current_context_start = false,
+			}
+	end
+  },
+	{
+		"nmac427/guess-indent.nvim",
+		config = function ()
+			require('guess-indent').setup {}
+		end
+	}
+
 }
