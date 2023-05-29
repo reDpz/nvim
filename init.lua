@@ -28,9 +28,9 @@ require("lazy").setup("plugins")
 require("plugconfig.treesitter")
 require("plugconfig.zero")
 require('plugconfig.cmp')
-require('neovide.config')
 
 require("colours")
+require('neovide.config')
 
 if vim.g.started_by_firenvim == true or vim.g.neovide then
 	vim.o.laststatus = 0
