@@ -5,5 +5,9 @@ return {
 		config = function()
 			require'startup'.setup()
 		end
+	},
+	{
+		'vladdoster/remember.nvim',
+		config = [[ require('remember') ]]
 	}
 }

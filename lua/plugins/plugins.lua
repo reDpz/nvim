@@ -142,5 +142,20 @@ return{
     end,
     dependencies = {'nvim-treesitter', 'L3MON4D3/LuaSnip'}, -- or require if not used so far
   },
-  { "lukas-reineke/indent-blankline.nvim" },
+  {
+	"lukas-reineke/indent-blankline.nvim",
+	config = function ()
+		require("indent_blankline").setup {
+				show_current_context = true,
+				show_current_context_start = false,
+			}
+	end
+  },
+	{
+		"nmac427/guess-indent.nvim",
+		config = function ()
+			require('guess-indent').setup {}
+		end
+	}
+
 }
