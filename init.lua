@@ -32,6 +32,11 @@ require('plugconfig.cmp')
 require("colours")
 require('neovide.config')
 
+vim.wo.fillchars='eob: '
+
+-- It's repeated as sometimes the one prior to this does not work
+vim.cmd([[set fcs=eob:\ ]])
+
 if vim.g.started_by_firenvim == true or vim.g.neovide then
 	vim.o.laststatus = 0
 else

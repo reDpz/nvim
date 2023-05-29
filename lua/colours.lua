@@ -4,7 +4,6 @@ colorscheme gruvbox
 set cursorline
 ]])
 
-vim.wo.fillchars='eob: '
 
 local lineBg = "#3c3836"
 
@@ -14,6 +13,7 @@ vim.api.nvim_set_hl(0, "Visual", { bg = "#d79921", fg = "#282828"})
 vim.api.nvim_set_hl(0, "Todo", { fg = "#282828", bg = "#fabd2f", italic = true, bold = true })
 vim.api.nvim_set_hl(0, 'EndOfLineMarker', { bg = lineBg })
 vim.api.nvim_set_hl(0, 'SignColumn', { bg = lineBg })
+vim.api.nvim_set_hl(0, 'EndOfBuffer', { fg = 'none' })
 
 -- syntax highlight
 vim.api.nvim_set_hl(0, "Comment", {fg = '#928374',italic = true} )
