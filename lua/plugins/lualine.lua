@@ -7,7 +7,7 @@ return {{
         icons_enabled = true,
         theme = 'gruvbox',
         component_separators = { left = ' ', right = ' ' },
-        section_separators = { left = '\u{e0c6}', right = '\u{e0c6}' },
+        section_separators = { left = '\u{e0c6}', right = '\u{e0c7}' },
         disabled_filetypes = {
           statusline = {},
           winbar = {},
