@@ -27,3 +27,10 @@ vim.api.nvim_set_hl(0, "DiagnosticError", {fg = '#cc241d', bg = lineBg })
 vim.api.nvim_set_hl(0, "DiagnosticFloatingError", {fg = '#cc241d', bg = "none" })
 
 vim.api.nvim_set_hl(0, "SagaLightBulb", { bg = lineBg})
+
+
+-- make diagnoistics errors have squiggly underlines
+local hl_groups = { 'DiagnosticUnderlineError', "DiagnosticsUnderlineWarn", "DiagnosticUnderlineHint" }
+for _, hl in ipairs(hl_groups) do
+  vim.cmd.highlight(hl .. ' gui=undercurl')
+end
