@@ -34,12 +34,23 @@ require('neovide.config')
 
 vim.wo.fillchars='eob: '
 
+-- Change error signs
+local signs = { Error = " ", Warning = " ", Hint = " ", Information = " " }
+for type, icon in pairs(signs) do
+  local hl = "LspDiagnosticsSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+end
+
 -- It's repeated as sometimes the one prior to this does not work
 vim.cmd([[set fcs=eob:\ ]])
 
-if vim.g.started_by_firenvim == true or vim.g.neovide then
+-- Set background accordingly to how neovim has been started
+if vim.g.started_by_firenvim or vim.g.neovide then
 	vim.o.laststatus = 0
 else
 	vim.o.laststatus = 2
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 end
+
+
+
