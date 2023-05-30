@@ -3,7 +3,11 @@ return {
     "glepnir/lspsaga.nvim",
     event = "LspAttach",
     config = function()
-        require("lspsaga").setup({})
+        require("lspsaga").setup({
+                lightbulb = {
+                    enable = false
+                }
+            })
     end,
     dependencies = {
       {"nvim-tree/nvim-web-devicons"},

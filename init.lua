@@ -29,6 +29,7 @@ require("plugconfig.treesitter")
 require("plugconfig.zero")
 require('plugconfig.cmp')
 
+
 require("colours")
 require('neovide.config')
 
