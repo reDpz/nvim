@@ -32,6 +32,7 @@ vim.api.nvim_set_hl(0, "SagaLightBulb", { bg = lineBg})
 
 -- telescope
 highlight(0, 'TelescopeMatching', { fg = '#ebdbb2', bold = true})
+highlight(0, 'LspCodeLens', { fg = '#928374' })
 
 -- cmp
 
