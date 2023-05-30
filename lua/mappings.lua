@@ -1,13 +1,28 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", ";", ":")
-vim.keymap.set("n", "j", "gj")
-vim.keymap.set("n", "k", "gk")
-vim.keymap.set("n", "|", "<cmd>split<CR>")
-vim.keymap.set("n", "\\", "<cmd>vs<CR>")
+local keymap = vim.keymap.set
+keymap("n", ";", ":")
+keymap("n", "j", "gj")
+keymap("n", "k", "gk")
+keymap("n", "|", "<cmd>split<CR>")
+keymap("n", "\\", "<cmd>vs<CR>")
+
+-- switch between buffers
+keymap('n', '[b', '<cmd>bp<CR>')
+keymap('n', ']b', '<cmd>bN<CR>')
+
+-- save current file
+keymap('i', '<C-s>', '<cmd>wa<CR>')
+keymap('n', '<C-s>', '<cmd>wa<CR>')
 
 -- write file
-vim.keymap.set("n", "ZW", "<cmd>wa<CR>")
+keymap("n", "ZW", "<cmd>wa<CR>")
+
+-- move forward (similar to tabout)
+-- keymap('i', '<S-Tab>', '<ESC-la>')
 
 
 -- opens nvim-tree
-vim.keymap.set('n', '<leader>e', '<cmd>NvimTreeToggle<CR>')
+keymap('n', '<leader>e', '<cmd>NvimTreeToggle<CR>')
+
+-- Show highlights
+keymap('n', '<leader>his', '<cmd>so $VIMRUNTIME/syntax/hitest.vim<CR>')

@@ -22,9 +22,9 @@ cmp.setup({
   },
   mapping = cmp.mapping.preset.insert({
     ["<C-b>"] = cmp.mapping.scroll_docs(-4),
-    ["<C-f>"] = cmp.mapping.scroll_docs(4),
-    ["<Backspace>"] = cmp.mapping.abort(),
-    ["<CR>"] = cmp.mapping.confirm({ select = true }),
+    ["<C-g>"] = cmp.mapping.scroll_docs(4),
+    ["<C-f>"] = cmp.mapping.abort(),
+    ["<C-e>"] = cmp.mapping.confirm({ select = true }),
     ["<C-Space>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()

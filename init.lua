@@ -33,16 +33,15 @@ require('plugconfig.cmp')
 require("colours")
 require('neovide.config')
 
-vim.wo.fillchars='eob: '
 
 -- Change error signs
-local signs = { Error = " ", Warning = " ", Hint = " ", Information = " " }
-for type, icon in pairs(signs) do
-  local hl = "LspDiagnosticsSign" .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
-end
+vim.fn.sign_define('DiagnosticSignError', { text = '', texthl = 'DiagnosticSignError' })
+vim.fn.sign_define('DiagnosticSignWarn', { text = '', texthl = 'DiagnosticSignWarn' })
+vim.fn.sign_define('DiagnosticSignInfo', { text = '', texthl = 'DiagnosticSignInfo' })
+vim.fn.sign_define('DiagnosticSignHint', { text = '', texthl = 'DiagnosticSignHint' })
 
 -- It's repeated as sometimes the one prior to this does not work
+vim.wo.fillchars='eob: '
 vim.cmd([[set fcs=eob:\ ]])
 
 -- Set background accordingly to how neovim has been started
@@ -55,3 +54,5 @@ end
 
 
 
+-- prevent keys being overwritten 
+-- require('lazy').setup(require('plugins.tabout'))
