@@ -9,6 +9,7 @@ keymap("n", "\\", "<cmd>vs<CR>")
 -- switch between buffers
 keymap('n', '[b', '<cmd>bp<CR>')
 keymap('n', ']b', '<cmd>bN<CR>')
+keymap('n', 'q', '<cmd>bd<CR>')
 
 -- save current file
 keymap('i', '<C-s>', '<cmd>wa<CR>')
@@ -24,5 +25,5 @@ keymap("n", "ZW", "<cmd>wa<CR>")
 -- opens nvim-tree
 keymap('n', '<leader>e', '<cmd>NvimTreeToggle<CR>')
 
--- Show highlights
+-- Show highlight group
 keymap('n', '<leader>his', '<cmd>so $VIMRUNTIME/syntax/hitest.vim<CR>')
