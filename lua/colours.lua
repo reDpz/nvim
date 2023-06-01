@@ -17,6 +17,7 @@ vim.api.nvim_set_hl(0, "Todo", { fg = "#282828", bg = "#fabd2f", italic = true, 
 vim.api.nvim_set_hl(0, 'EndOfLineMarker', { bg = lineBg })
 vim.api.nvim_set_hl(0, 'SignColumn', { bg = lineBg })
 vim.api.nvim_set_hl(0, 'EndOfBuffer', { fg = 'none' })
+highlight(0, 'Search', { fg = '#282828', bg = '#fe8019' })
 
 -- syntax highlight
 vim.api.nvim_set_hl(0, "Comment", {fg = '#928374',italic = true} )
