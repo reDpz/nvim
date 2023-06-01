@@ -18,8 +18,6 @@ keymap('n', '<C-s>', '<cmd>wa<CR>')
 -- write file
 keymap("n", "ZW", "<cmd>wa<CR>")
 
--- move forward (similar to tabout)
--- keymap('i', '<S-Tab>', '<ESC-la>')
 
 
 -- opens nvim-tree
