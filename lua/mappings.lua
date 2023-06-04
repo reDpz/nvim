@@ -16,11 +16,16 @@ keymap('i', '<C-s>', '<cmd>wa<CR>')
 keymap('n', '<C-s>', '<cmd>wa<CR>')
 
 -- exit
-keymap('i', '<C-x>', '<cmd>q<CR>')
 keymap('n', '<C-x>', '<cmd>q<CR>')
+keymap('i', '<C-x>', '<cmd>q<CR>')
+
+-- write quit
+keymap('n', '<C-q>', '<cmd>wq<CR>')
+keymap('i', '<C-q>', '<cmd>wq<CR>')
+
 -- force exit
-keymap('n', '<C-S-x>', '<cmd>q!<CR>')
-keymap('i', '<C-S-x>', '<cmd>q!<CR>')
+keymap('n', '<A-q>', '<cmd>q!<CR>')
+keymap('i', '<A-q>', '<cmd>q!<CR>')
 
 -- write file
 keymap("n", "ZW", "<cmd>wa<CR>")
