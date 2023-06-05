@@ -52,7 +52,7 @@ else
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 end
 
-
+-- allow error message to show properly
 
 -- prevent keys being overwritten 
--- require('lazy').setup(require('plugins.tabout'))
+-- require('lazy').setup(require('plugins.

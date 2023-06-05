@@ -12,7 +12,7 @@ highlight(0, 'TermCursor', { bg = '#fabd2f', fg = '#282828' })
 highlight(0, 'Cursor', { bg = '#fabd2f', fg = '#282828' })
 -- vim highlights
 vim.api.nvim_set_hl(0, "LineNr", { fg = "#7c6f64", bg = lineBg })
-highlight(0, 'CursorLineNr', { fg = '#fabd2f' ,bg = '#504945'})
+-- highlight(0, 'CursorLineNr', { fg = '#fabd2f' ,bg = '#504945'})
 
 vim.api.nvim_set_hl(0, "Visual", { bg = "#d79921", fg = "#282828"})
 vim.api.nvim_set_hl(0, "Todo", { fg = "#282828", bg = "#fabd2f", italic = true, bold = true })
