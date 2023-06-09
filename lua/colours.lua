@@ -16,7 +16,7 @@ highlight(0, 'CursorLineNr', { fg = '#fabd2f', bg = lineBg })
 
 vim.api.nvim_set_hl(0, "Visual", { bg = "#d79921", fg = "#282828"})
 vim.api.nvim_set_hl(0, "Todo", { fg = "#282828", bg = "#fabd2f", italic = true, bold = true })
-vim.api.nvim_set_hl(0, 'EndOfLineMarker', { bg = lineBg })
+-- vim.api.nvim_set_hl(0, 'EndOfLineMarker', { bg = lineBg })
 vim.api.nvim_set_hl(0, 'SignColumn', { bg = 'none' })
 vim.api.nvim_set_hl(0, 'CursorLineSign', { bg = lineBg })
 vim.api.nvim_set_hl(0, 'EndOfBuffer', { fg = 'none' })
@@ -27,10 +27,10 @@ vim.api.nvim_set_hl(0, "Comment", {fg = '#928374',italic = true} )
 vim.api.nvim_set_hl(0, "String", {fg = '#b8bb26', italic = true})
 
 -- diagnoistics
-vim.api.nvim_set_hl(0, "DiagnosticSignWarn", {fg = '#fe8019', bg = lineBg })
-vim.api.nvim_set_hl(0, "DiagnosticSignInfo", {fg = '#83a598', bg = lineBg })
-vim.api.nvim_set_hl(0, "DiagnosticSignHint", {fg = '#8ec07c', bg = lineBg })
-vim.api.nvim_set_hl(0, "DiagnosticSignError", {fg = '#cc241d', bg = lineBg })
+vim.api.nvim_set_hl(0, "DiagnosticSignWarn", {fg = '#fe8019', bg = 'none' })
+vim.api.nvim_set_hl(0, "DiagnosticSignInfo", {fg = '#83a598', bg = 'none' })
+vim.api.nvim_set_hl(0, "DiagnosticSignHint", {fg = '#8ec07c', bg = 'none' })
+vim.api.nvim_set_hl(0,"DiagnosticSignError", {fg = '#cc241d', bg = 'none' })
 
 vim.api.nvim_set_hl(0, "SagaLightBulb", { bg = lineBg})
 

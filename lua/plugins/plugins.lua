@@ -23,7 +23,8 @@ return{
 		'hrsh7th/cmp-cmdline'
 	},
 	{
-		'hrsh7th/nvim-cmp'
+		'hrsh7th/nvim-cmp',
+
 	},
 
 	{

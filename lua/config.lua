@@ -21,3 +21,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 ]])
+
+
+-- allows for folding headers in markdown
+vim.g.markdown_folding = 1
