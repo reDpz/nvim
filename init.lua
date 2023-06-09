@@ -56,3 +56,13 @@ end
 
 -- prevent keys being overwritten 
 -- require('lazy').setup(require('plugins.
+
+
+-- lualine
+require('lualine').setup {
+  sections = {
+    lualine_a = {
+      { 'mode', fmt = function(str) return str:sub(1,1) end }
+    },
+  }
+}
