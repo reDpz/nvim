@@ -45,3 +45,11 @@ keymap('n', '<leader>e', '<cmd>NvimTreeToggle<CR>')
 
 -- Show highlight group
 keymap('n', '<leader>his', '<cmd>so $VIMRUNTIME/syntax/hitest.vim<CR>')
+
+
+-- tmux navigation in insert
+
+keymap('i', 'C-h', 'A-h')
+keymap('i', 'C-l', 'A-l')
+keymap('i', 'C-k', 'A-k')
+keymap('i', 'C-j', 'A-j')
