@@ -6,17 +6,26 @@
 Info:
 * Font: CaskaydiaCove NFM
 
+## Differences
+
+* Mostly transparent
+    * Transparency is disabled for neovide as it doesn't support it
+* Statusline representing the mode is only character in length (idk why but I love this so much)
+
+
 ## Plugins (import ones)
 
-* Barbar for buffer bar
+* Bufferline
 * Lualine for statusline
 * Lazy as a package manager
-* Tabout (allows for you to press tab to exit "" or brackets, haven't got it to work fully yet)
+* Tabout (allows for you to press tab to exit "" or brackets)
 * vim-tmux-navigator
 * nvim-tree
 * telescope
 * which-key
-* vimwiki 
+* vimwiki
+* Markdown preview (start your preview with Spacebar mk or `<leader>mk`)
+
 
 ## Important note for windows users
 
