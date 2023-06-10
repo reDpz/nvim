@@ -26,4 +26,4 @@ Make sure to install the following with scoop:
 
 ## Problems
 
-* The statusline will not show up on neovide, tested on both windows and linux
+* ~~The statusline will not show up on neovide, tested on both windows and Linux~~ This has been fixed, I'm not sure what exactly fixed this either.

@@ -11,6 +11,12 @@ keymap('n', '[b', '<cmd>bp<CR>')
 keymap('n', ']b', '<cmd>bN<CR>')
 keymap('n', 'q', '<cmd>bd<CR>')
 
+
+keymap('i', '<C-Tab>', '<cmd>bN<CR>')
+keymap('n', '<C-Tab>', '<cmd>bN<CR>')
+keymap('i', '<C-S-Tab>', '<cmd>bp<CR>')
+keymap('n', '<C-S-Tab>', '<cmd>bp<CR>')
+
 -- save current file
 keymap('i', '<C-s>', '<cmd>wa<CR>')
 keymap('n', '<C-s>', '<cmd>wa<CR>')
