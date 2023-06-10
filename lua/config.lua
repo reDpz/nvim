@@ -25,3 +25,7 @@ set expandtab
 
 -- allows for folding headers in markdown
 vim.g.markdown_folding = 1
+
+
+-- automatically change the directory
+vim.o.autochdir=true
