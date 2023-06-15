@@ -20,6 +20,7 @@ set undofile " remember changes across sessions
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set laststatus=3
 ]])
 
 
@@ -29,3 +30,6 @@ vim.g.markdown_folding = 1
 
 -- automatically change the directory
 vim.o.autochdir=true
+
+-- show only on statusline for all splits
+vim.o.laststatus = 3

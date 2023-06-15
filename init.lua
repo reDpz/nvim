@@ -1,3 +1,4 @@
+local keymap = vim.keymap.set
 -- termgui
 vim.opt.termguicolors = true
 
@@ -66,3 +67,7 @@ require('lualine').setup {
     },
   }
 }
+
+
+-- it was getting overwritten by something and im lazy so...
+keymap('n', '<C-j>', '<cmd>ToggleTerm<cr>')

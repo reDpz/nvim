@@ -8,12 +8,12 @@ keymap("n", "\\", "<cmd>vs<CR>")
 
 -- switch between buffers
 keymap('n', '[b', '<cmd>bp<CR>')
-keymap('n', ']b', '<cmd>bN<CR>')
+keymap('n', ']b', '<cmd>bn<CR>')
 keymap('n', 'q', '<cmd>bd<CR>')
 
 
-keymap('i', '<C-Tab>', '<cmd>bN<CR>')
-keymap('n', '<C-Tab>', '<cmd>bN<CR>')
+keymap('i', '<C-Tab>', '<cmd>bn<CR>')
+keymap('n', '<C-Tab>', '<cmd>bn<CR>')
 keymap('i', '<C-S-Tab>', '<cmd>bp<CR>')
 keymap('n', '<C-S-Tab>', '<cmd>bp<CR>')
 
@@ -57,4 +57,15 @@ keymap('n', '.', '<cmd>lua vim.lsp.buf.code_action()<CR>')
 -- tmux navigation in insert
 
 keymap('n', '<leader>l', '<cmd>TroubleToggle<cr>')
+
+-- Color picker
+local opts = { noremap = true, silent = true }
+
+vim.keymap.set("n", "<C-c>", "<cmd>PickColor<cr>", opts)
+vim.keymap.set("i", "<C-c>", "<cmd>PickColorInsert<cr>", opts)
+
+-- terminal
+keymap('n', '<leader>t', '<cmd>ToggleTerm<cr>')
+keymap("n", "<leader>g", "<cmd>lua gorun_toggle()<CR>", {noremap = true, silent = true})
+
 
