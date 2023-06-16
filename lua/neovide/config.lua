@@ -14,6 +14,10 @@ vim.g.neovide_cursor_animation_length = 0
 -- remember previous window size
 vim.g.neovide_remember_window_size = true
 
-vim.cmd([[
-map! <C-S-v> <C-R>+
-]])
+if vim.g.neovide then
+    vim.cmd([[
+    map! <C-S-v> <C-R>+
+    cd ~
+    NvimTreeOpen
+    ]])
+end

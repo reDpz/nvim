@@ -68,4 +68,7 @@ vim.keymap.set("i", "<C-c>", "<cmd>PickColorInsert<cr>", opts)
 keymap('n', '<leader>t', '<cmd>ToggleTerm<cr>')
 keymap("n", "<leader>g", "<cmd>lua gorun_toggle()<CR>", {noremap = true, silent = true})
 
+local opts = {buffer = 0}
+keymap('t', '<C-k>', [[<cmd>wincmd k<cr>]], opts)
+
 

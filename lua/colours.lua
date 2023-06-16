@@ -47,5 +47,6 @@ for _, hl in ipairs(hl_groups) do
   vim.cmd.highlight(hl .. ' gui=undercurl')
 end
 
--- highlight(0, 'BufferlineFill', {bg = 'none'})
+-- no bg on bufferline
+highlight(0, 'BufferlineFill', {bg = 'none'})
 
