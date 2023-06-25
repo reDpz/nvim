@@ -17,7 +17,7 @@ return{{
             gorun:toggle()
         end
         require("toggleterm").setup{
-            open_mapping = '<C-j>',
+            open_mapping = '<C-p>',
             insert_mappings = true,
             terminal_mappings = true,
             highlights = {
@@ -28,7 +28,7 @@ return{{
                     LineNr = '#282828',
                 }
             },
-            size = 15,
+            size = 18,
 
             -- I love cursorline however it doesn't work very well in the terminal
             on_create = function ()

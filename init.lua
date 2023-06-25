@@ -70,6 +70,4 @@ require('lualine').setup {
 
 
 -- it was getting overwritten by something and im lazy so...
-keymap('n', '<C-j>', '<cmd>ToggleTerm size=19<cr>')
-
-
+-- keymap('n', '<C-t>', '<cmd>ToggleTerm size=19<cr>')
