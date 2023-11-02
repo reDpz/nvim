@@ -1,0 +1,1 @@
+return {{'ashinkarov/nvim-agda'}}

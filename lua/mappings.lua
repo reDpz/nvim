@@ -70,5 +70,3 @@ keymap("n", "<leader>g", "<cmd>lua gorun_toggle()<CR>", {noremap = true, silent 
 
 local opts = {buffer = 0}
 keymap('t', '<C-k>', [[<cmd>wincmd k<cr>]], opts)
-
-

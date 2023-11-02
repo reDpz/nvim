@@ -71,14 +71,36 @@ return{
 	},
 
 	-- less important stuff
+		-- opts = {
+		-- }
 	{
 		"lukas-reineke/indent-blankline.nvim",
+		main = "ibl",
+		opts = {
+			show_current_context = true,
+			show_current_context_start = false,
+
+		},
 		config = function ()
-			require("indent_blankline").setup {
-				char = "┆",
-				show_current_context = true,
-				show_current_context_start = false,
+
+			local highlight = {
+				"Whitespace",
 			}
+
+			require("ibl").setup{
+				indent = {
+					char = "┆",
+					highlight = highlight,
+				},
+
+				whitespace = {
+					highlight = highlight,
+					remove_blankline_trail = false,
+				},
+
+				scope = { enabled = true, },
+			}
+
 		end
 	},
 	{
