@@ -1,13 +1,24 @@
 return {
 	{
 		"numToStr/Comment.nvim",
-		config = function()
-			require('Comment').setup({
-				toggler = {
-					line = '<leader>/',
-					block = '<leader>g/'
-				}}
-			)
-		end
+		opts = {
+			sticky = true,
+			toggler = {
+				line = "<C-j>",
+				block = "gb",
+			},
+			opleader = {
+				line = "gcc"
+			}
+		},
+		lazy = false,
+		-- config = function()
+			-- require('Comment').setup({
+				-- toggler = {
+					-- line = '<leader>/',
+					-- block = '<leader>g/'
+				-- }}
+			-- )
+		-- end
 	}
 }
