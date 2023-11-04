@@ -1,4 +1,4 @@
-vim.o.guifont = "CaskaydiaCove NFM:h13"
+vim.o.guifont = "CaskaydiaCove Nerd Font Mono:h13"
 
 -- padding
 -- local padpx = 0
@@ -17,7 +17,6 @@ vim.g.neovide_remember_window_size = true
 if vim.g.neovide then
     vim.cmd([[
     map! <C-S-v> <C-R>+
-    cd ~
-    NvimTreeOpen
+    cd ~/wiki/oop/Ass1/NewsClassifier/
     ]])
 end
