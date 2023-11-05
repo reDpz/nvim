@@ -7,6 +7,7 @@ return{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate"
 	},
+	{ 'filNaj/tree-setter' },
 	{
 		'neovim/nvim-lspconfig'
 	},

@@ -33,3 +33,7 @@ vim.o.autochdir=true
 
 -- show only on statusline for all splits
 vim.o.laststatus = 3
+
+if vim.loop.os_uname().sysname == "Windows_NT" then
+    vim.cmd([[set shell=C:\msys64\shellnvim.cmd]])
+end

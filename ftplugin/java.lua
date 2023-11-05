@@ -2,6 +2,7 @@
 -- Locations:
 -- 'nvim/ftplugin/java.lua'.
 -- 'nvim/lang-servers/intellij-java-google-style.xml'
+--
 
 local jdtls_ok, jdtls = pcall(require, "jdtls")
 if not jdtls_ok then
@@ -49,7 +50,7 @@ local config = {
     '-Xms1g',
     '--add-modules=ALL-SYSTEM',
     '--add-opens', 'java.base/java.util=ALL-UNNAMED',
-    '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
+    '--edd-opens', 'java.base/java.lang=ALL-UNNAMED',
 
     '-jar', path_to_jar,
     '-configuration', path_to_lsp_server,
@@ -154,5 +155,6 @@ end
 -- This starts a new client & server,
 -- or attaches to an existing client & server depending on the `root_dir`.
 require('jdtls').start_or_attach(config)
+require("jdtls.setup").add_commands()
 
 

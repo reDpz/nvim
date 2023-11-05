@@ -19,6 +19,10 @@ require'nvim-treesitter.configs'.setup {
 	  enable = true
   },
 
+  tree_setter = {
+    enable = true
+  },
+
   highlight = {
     enable = true,
 
