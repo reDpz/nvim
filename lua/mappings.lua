@@ -36,6 +36,13 @@ keymap('i', '<A-q>', '<cmd>q!<CR>')
 -- write file
 keymap("n", "ZW", "<cmd>wa<CR>")
 
+-- code lens
+keymap("n", "<leader>cld","<Cmd>lua vim.lsp.codelens.refresh()<CR>")
+keymap("n", "<leader>clr", "<Cmd>lua vim.lsp.codelens.run()<CR>")
+
+-- format
+keymap("n", "<C-F>", "<Cmd>LspZeroFormat<CR>")
+
 -- -- move down and up with with alt+j/k
 -- keymap('i', '<A-j>', '<Down>')
 -- keymap('i', '<A-k>', '<Up>')

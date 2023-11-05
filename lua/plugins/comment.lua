@@ -4,7 +4,7 @@ return {
 		opts = {
 			sticky = true,
 			toggler = {
-				line = "<C-j>",
+				line = "<C-_>",
 				block = "gb",
 			},
 			opleader = {
