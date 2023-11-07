@@ -19,6 +19,7 @@ require('lspconfig').ltex.setup({
   },
 })
 
+lsp.skip_server_setup({'jdtls'})
 
 lsp.setup()
 
