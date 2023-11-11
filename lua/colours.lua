@@ -41,9 +41,11 @@ highlight(0, 'LspCodeLens', { fg = '#928374' })
 
 -- cmp
 vim.api.nvim_set_hl(0, 'Pmenu', {fg = '#ebdbb2', bg = '#1c1c1c'})
+vim.api.nvim_set_hl(0, 'SagaNormal', {bg = '#282828'})
 vim.api.nvim_set_hl(0, 'PmenuSel', {fg = '#282828', bg = '#fabd2f'})
 vim.api.nvim_set_hl(0, 'WhichKeyBorder', {bg = '#282828', fg = '#fabd2f'})
 vim.api.nvim_set_hl(0, 'WhichKeyFloat', {bg = '#282828', fg = '#fabd2f'})
+
 
 -- make diagnoistics errors have squiggly underlines
 local hl_groups = { 'DiagnosticUnderlineError', "DiagnosticUnderlineWarn", "DiagnosticUnderlineInfo" }

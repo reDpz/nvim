@@ -59,8 +59,8 @@ keymap('n', '<leader>e', '<cmd>NvimTreeToggle<CR>')
 
 -- Show highlight group
 keymap('n', '<leader>his', '<cmd>so $VIMRUNTIME/syntax/hitest.vim<CR>')
-keymap('i', '<C-.>', '<cmd>lua vim.lsp.buf.code_action()<CR>')
-keymap('n', '.', '<cmd>lua vim.lsp.buf.code_action()<CR>')
+keymap('i', '<C-.>', '<cmd>Lspsaga code_action<CR>')
+keymap('n', '.', '<cmd>Lspsaga code_action<CR>')
 
 -- tmux navigation in insert
 
@@ -78,3 +78,10 @@ keymap("n", "<leader>g", "<cmd>lua gorun_toggle()<CR>", { noremap = true, silent
 
 local opts = { buffer = 0 }
 keymap('t', '<C-k>', [[<cmd>wincmd k<cr>]], opts)
+
+-- Lspsaga
+keymap('n', 'gd', '<cmd>Lspsaga goto_definition<CR>')
+keymap('n', 'gD', '<cmd>Lspsaga peek_definition<CR>')
+keymap({'n','t','i'}, '<C-p>', '<cmd>Lspsaga term_toggle<CR>')
+keymap('n', 'r', '<cmd>Lspsaga rename<CR>')
+keymap({'n','i'}, '<C-h>', '<cmd>Lspsaga hover_doc<CR>')

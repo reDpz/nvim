@@ -84,7 +84,8 @@ cmp.setup({
   },
   window = {
     completion = {
-      scrollbar = '║'
+      scrollbar = '║',
+      border = 'none'
     },
     documentation = {}
   },
