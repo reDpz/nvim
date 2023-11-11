@@ -40,6 +40,7 @@ highlight(0, 'LspCodeLens', { fg = '#928374' })
 
 
 -- cmp
+vim.api.nvim_set_hl(0, 'Pmenu', {fg = '#ebdbb2', bg = '#1c1c1c'})
 vim.api.nvim_set_hl(0, 'PmenuSel', {fg = '#282828', bg = '#fabd2f'})
 
 -- make diagnoistics errors have squiggly underlines
