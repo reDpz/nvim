@@ -20,7 +20,7 @@ Make sure to install the following with scoop:
 * fzf
 
 For a more functional neovim on windows I highly recomend using [neovide](https://neovide.dev/) (this is GUI client for neovim).
-- The reason as to why neovide is required/recommended on windows is due to the fact that conpty can't process undercurls and other types of underlines and also steals the "C-Space" input which I use pretty frequently and numerous other things like `<C-/>` having to be renamed to `<c-_>`
+- The reason as to why neovide is required/recommended on windows is due to the fact that conpty can't process undercurls and other types of underlines and also steals the "C-Space" input which I use pretty frequently and numerous other things like `<C-/>` having to be renamed to `<C-_>`
 
 ## Problems
 
