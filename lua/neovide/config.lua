@@ -16,7 +16,7 @@ vim.g.neovide_remember_window_size = true
 
 if vim.g.neovide then
     vim.cmd([[
-    map! <C-S-v> <C-R>+
-    cd ~/wiki/oop/Ass1/NewsClassifier/
+    nnoremap <C-S-v> <C-R>+
+    cd ~
     ]])
 end

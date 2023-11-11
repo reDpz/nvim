@@ -1,4 +1,4 @@
-return{
+return {
 	"folke/which-key.nvim",
 	{
 		"morhetz/gruvbox",
@@ -38,7 +38,7 @@ return{
 		build = function()
 			pcall(vim.cmd, 'MasonUpdate')
 		end,
-		config = function ()
+		config = function()
 			require("mason").setup({
 				ui = {
 					icons = {
@@ -55,25 +55,25 @@ return{
 		branch = 'v2.x',
 		dependencies = {
 			-- LSP Support
-			{'neovim/nvim-lspconfig'},             -- Required
-			{                                      -- Optional
+			{ 'neovim/nvim-lspconfig' }, -- Required
+			{                 -- Optional
 				'williamboman/mason.nvim',
 				build = function()
 					pcall(vim.cmd, 'MasonUpdate')
 				end,
 			},
-			{'williamboman/mason-lspconfig.nvim'}, -- Optional
+			{ 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
 			-- Autocompletion
-			{'hrsh7th/nvim-cmp'},     -- Required
-			{'hrsh7th/cmp-nvim-lsp'}, -- Required
-			{'L3MON4D3/LuaSnip'},     -- Required
+			{ 'hrsh7th/nvim-cmp' }, -- Required
+			{ 'hrsh7th/cmp-nvim-lsp' }, -- Required
+			{ 'L3MON4D3/LuaSnip' }, -- Required
 		}
 	},
 
 	-- less important stuff
-		-- opts = {
-		-- }
+	-- opts = {
+	-- }
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		main = "ibl",
@@ -82,33 +82,32 @@ return{
 			show_current_context_start = false,
 
 		},
-		config = function ()
-
+		config = function()
 			local highlight = {
 				"Whitespace",
 			}
 
-			require("ibl").setup{
+			require("ibl").setup {
 				-- show_current_context = true,
 				-- show_current_context_start = false,
 				indent = {
 					char = "┆",
+					-- tab_char = { "a", "b", "c" },
 					highlight = highlight,
 				},
 
 				whitespace = {
 					highlight = highlight,
-					remove_blankline_trail = false,
+					remove_blankline_trail = true,
 				},
 
 				scope = { enabled = true, },
 			}
-
 		end
 	},
 	{
 		"nmac427/guess-indent.nvim",
-		config = function ()
+		config = function()
 			require('guess-indent').setup {}
 		end
 	},

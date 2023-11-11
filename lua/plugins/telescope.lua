@@ -7,6 +7,7 @@ return{
         vim.keymap.set('n', '<leader>gf', builtin.git_files, {})
         vim.keymap.set('n', '<leader>fr', builtin.search_history, {})
         vim.keymap.set('n', '<leader>of', builtin.oldfiles, {})
+        vim.keymap.set('n', '<leader>rg', builtin.live_grep, {})
         require('telescope').setup {
             defaults = {
                 theme = "center",

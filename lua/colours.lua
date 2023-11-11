@@ -38,8 +38,9 @@ vim.api.nvim_set_hl(0, "SagaLightBulb", { bg = lineBg})
 highlight(0, 'TelescopeMatching', { fg = '#ebdbb2', bold = true})
 highlight(0, 'LspCodeLens', { fg = '#928374' })
 
--- cmp
 
+-- cmp
+vim.api.nvim_set_hl(0, 'PmenuSel', {fg = '#282828', bg = '#fabd2f'})
 
 -- make diagnoistics errors have squiggly underlines
 local hl_groups = { 'DiagnosticUnderlineError', "DiagnosticUnderlineWarn", "DiagnosticUnderlineInfo" }
@@ -48,5 +49,8 @@ for _, hl in ipairs(hl_groups) do
 end
 
 -- no bg on bufferline
-highlight(0, 'BufferlineFill', {bg = 'none'})
+-- highlight(0, 'BufferlineFill', {bg = 'none'})
 
+-- nvim tree
+vim.api.nvim_set_hl(0, 'NvimTreeNormal', {bg = '#1c1c1c'})
+-- vim.cmd([[set fillchars+=vert:▕]])

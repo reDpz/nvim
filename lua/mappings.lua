@@ -37,11 +37,11 @@ keymap('i', '<A-q>', '<cmd>q!<CR>')
 keymap("n", "ZW", "<cmd>wa<CR>")
 
 -- code lens
-keymap("n", "<leader>cld","<Cmd>lua vim.lsp.codelens.refresh()<CR>")
+keymap("n", "<leader>cld", "<Cmd>lua vim.lsp.codelens.refresh()<CR>")
 keymap("n", "<leader>clr", "<Cmd>lua vim.lsp.codelens.run()<CR>")
 
 -- format
-keymap("n", "<C-F>", "<Cmd>LspZeroFormat<CR>")
+keymap("n", "<leader>f", "<Cmd>LspZeroFormat<CR>")
 
 -- -- move down and up with with alt+j/k
 -- keymap('i', '<A-j>', '<Down>')
@@ -54,6 +54,7 @@ keymap("n", "<C-F>", "<Cmd>LspZeroFormat<CR>")
 -- The reason as to why I use these is because I have a 60% keyboard, and I like it. Sometimes I might want to go up or down without exiting insert mode so therefore I would use alt + hjkl but then that would put me into normal mode.
 
 -- opens nvim-tree
+keymap('n', '<C-e>', '<cmd>NvimTreeToggle<CR>')
 keymap('n', '<leader>e', '<cmd>NvimTreeToggle<CR>')
 
 -- Show highlight group
@@ -73,7 +74,7 @@ vim.keymap.set("i", "<C-c>", "<cmd>PickColorInsert<cr>", opts)
 
 -- terminal
 keymap('n', '<leader>t', '<cmd>ToggleTerm<cr>')
-keymap("n", "<leader>g", "<cmd>lua gorun_toggle()<CR>", {noremap = true, silent = true})
+keymap("n", "<leader>g", "<cmd>lua gorun_toggle()<CR>", { noremap = true, silent = true })
 
-local opts = {buffer = 0}
+local opts = { buffer = 0 }
 keymap('t', '<C-k>', [[<cmd>wincmd k<cr>]], opts)
