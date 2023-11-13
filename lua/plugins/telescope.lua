@@ -10,7 +10,10 @@ return{
         vim.keymap.set('n', '<leader>rg', builtin.live_grep, {})
         require('telescope').setup {
             defaults = {
-                theme = "center",
+                theme = "dropdown",
+                window = {
+                    border = "single"
+                }
             }
         }
     end
