@@ -3,11 +3,10 @@ local lsp = require('lsp-zero').preset({ "recommended" })
 -- vim.o.winbar = " %{%v:lua.require'nvim-navic'.get_location()%}"
 
 lsp.on_attach(function(client, bufnr)
-  --[[ if client.server_capabilities.documentSymbolProvider then
-    navic.attach(client, bufnr)
-  end ]]
   lsp.default_keymaps({ buffer = bufnr })
 end)
+
+local on_attach = lsp.on_attach
 
 
 
@@ -83,7 +82,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {'jdtls', 'google_java_format', 'lua_ls', 'ast_grep'}
+  ensure_installed = { 'jdtls', 'lua_ls' }
 })
 
 require('mason-lspconfig').setup_handlers({
@@ -91,3 +90,15 @@ require('mason-lspconfig').setup_handlers({
     lspconfig[server].setup({})
   end,
 })
+
+-- cpp
+
+
+-- all servers
+local servers = {'clangd'}
+for _, lsp2 in pairs(servers) do
+  require('lspconfig')[lsp2].setup {
+    on_attach = on_attach,
+    debounce_text_changes = 150,
+  }
+end
