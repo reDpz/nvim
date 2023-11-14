@@ -80,3 +80,14 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end, opts)
   end,
 })
+
+require('mason').setup({})
+require('mason-lspconfig').setup({
+  ensure_installed = {'jdtls', 'google_java_format', 'lua_ls', 'ast_grep'}
+})
+
+require('mason-lspconfig').setup_handlers({
+  function(server)
+    lspconfig[server].setup({})
+  end,
+})
