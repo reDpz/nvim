@@ -85,3 +85,14 @@ keymap('n', 'gD', '<cmd>Lspsaga peek_definition<CR>')
 keymap({'n','t','i'}, '<C-p>', '<cmd>Lspsaga term_toggle<CR>')
 keymap('n', 'r', '<cmd>Lspsaga rename<CR>')
 keymap({'n','i'}, '<C-n>', '<cmd>Lspsaga hover_doc<CR>')
+keymap('n','<S-Tab>', '<cmd>Lspsaga outline<CR>')
+
+-- diagnostics lspsaga
+keymap('n', '[d', '<cmd>Lspsaga diagnostic_jump_prev<CR>')
+keymap('n', ']d', '<cmd>Lspsaga diagnostic_jump_next<CR>')
+
+
+-- dap
+
+keymap('n', '<leader>db', '<cmd>DapToggleBreakpoint<CR>')
+keymap('n', '<leader>dr', '<cmd>DapContinue<CR>')

@@ -26,7 +26,7 @@ highlight(0, 'Search', { fg = '#282828', bg = '#fe8019' })
 vim.api.nvim_set_hl(0, "Comment", {fg = '#928374',italic = true} )
 vim.api.nvim_set_hl(0, "String", {fg = '#b8bb26', italic = true})
 
--- diagnoistics
+-- diagnistics
 vim.api.nvim_set_hl(0, "DiagnosticSignWarn", {fg = '#fe8019', bg = 'none' })
 vim.api.nvim_set_hl(0, "DiagnosticSignInfo", {fg = '#83a598', bg = 'none' })
 vim.api.nvim_set_hl(0, "DiagnosticSignHint", {fg = '#8ec07c', bg = 'none' })
@@ -42,10 +42,17 @@ highlight(0, 'LspCodeLens', { fg = '#928374' })
 -- cmp
 vim.api.nvim_set_hl(0, 'Pmenu', {fg = '#ebdbb2', bg = '#1c1c1c'})
 vim.api.nvim_set_hl(0, 'SagaNormal', {bg = '#282828'})
-vim.api.nvim_set_hl(0, 'NormalFloat', {bg = '#282828'})
+vim.api.nvim_set_hl(0, 'NormalFloat1', {bg = '#282828'})
 vim.api.nvim_set_hl(0, 'PmenuSel', {fg = '#282828', bg = '#fabd2f'})
 vim.api.nvim_set_hl(0, 'WhichKeyBorder', {bg = '#282828', fg = '#fabd2f'})
 vim.api.nvim_set_hl(0, 'WhichKeyFloat', {bg = '#282828', fg = '#fabd2f'})
+
+
+-- noice
+vim.api.nvim_set_hl(0, "NoiceCmdlinePopupBorder", { link = "NvimNumberPrefix" })
+vim.api.nvim_set_hl(0, "NoiceCmdlineIcon", { link = "CmpItemMenu" })
+vim.api.nvim_set_hl(0, "NoicePopup", { link = "Normal" })
+vim.api.nvim_set_hl(0, "NoiceCmdlinePopupTitle", { link = "String" })
 
 
 -- make diagnoistics errors have squiggly underlines

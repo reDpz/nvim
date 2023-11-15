@@ -85,9 +85,13 @@ cmp.setup({
   window = {
     completion = {
       scrollbar = '║',
-      border = 'none'
+      border = 'none',
     },
-    documentation = {}
+    documentation = {
+      scrollbar = '║',
+      border = 'none',
+      winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
+    }
   },
 
   mapping = cmp.mapping.preset.insert({
