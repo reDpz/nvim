@@ -82,7 +82,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = { 'jdtls', 'lua_ls', 'clangd', 'clang-format', 'codelldb' }
+  ensure_installed = { 'jdtls', 'lua_ls', 'clangd', }
 })
 
 --[[ require('mason-lspconfig').setup_handlers({
