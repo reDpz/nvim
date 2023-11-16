@@ -13,7 +13,7 @@ local on_attach = lsp.on_attach
 -- (Optional) Configure lua language server for neovim
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
-require('lspconfig').ltex.setup({
+--[[ require('lspconfig').ltex.setup({
   filetypes = { "vimwiki", "markdown", "md", "pandoc", "vimwiki.markdown.pandoc" },
   flags = { debounce_text_changes = 300 },
   settings = {
@@ -21,7 +21,15 @@ require('lspconfig').ltex.setup({
       language = "en-GB",
     }
   },
-})
+}) ]]
+
+--[[ require('lspconfig').grammarly.setup({
+  filetypes = { "vimwiki", "markdown", "md", "pandoc", "vimwiki.markdown.pandoc" },
+  flags = { debounce_text_changes = 300 },
+  settings = {
+      language = "en-GB",
+  },
+}) ]]
 
 lsp.skip_server_setup({ 'jdtls' })
 
@@ -48,8 +56,6 @@ lspconfig.rust_analyzer.setup {
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 -- vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer

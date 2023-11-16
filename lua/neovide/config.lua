@@ -16,7 +16,7 @@ vim.g.neovide_remember_window_size = true
 
 if vim.g.neovide then
     vim.cmd([[
-    nnoremap <C-S-v> <C-R>+
+    nnoremap <C-S-v> "+p
     cd ~
     ]])
 end
