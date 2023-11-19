@@ -13,7 +13,7 @@ return {
                 [''] = 'rainbow-delimiters',
                 lua = 'rainbow-blocks',
             },
-            highlight = {
+            --[[ highlight = {
                 'Type',
                 'Conditional',
                 'Identifier',
@@ -21,7 +21,15 @@ return {
                 'diffAdded',
                 'Constant',
                 'Include',
-            },
+            }, ]]
+            highlight = {
+                'RainbowDelimiterRed',
+                'RainbowDelimiterOrange',
+                'RainbowDelimiterYellow',
+                'RainbowDelimiterGreen',
+                'RainbowDelimiterBlue',
+                'RainbowDelimiterViolet'
+            }
         }
     end
 }
