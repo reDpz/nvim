@@ -99,6 +99,19 @@ cmp.setup({
     ["<C-g>"] = cmp.mapping.scroll_docs(4),
     ["<C-f>"] = cmp.mapping.abort(),
     ["<C-e>"] = cmp.mapping.confirm({ select = true }),
+    ["<Up>"] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+        -- You could replace the expand_or_jumpable() calls with expand_or_locally_jumpable()
+        -- they way you will only jump inside the snippet region
+      elseif luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
+      elseif has_words_before() then
+        cmp.complete()
+      else
+        fallback()
+      end
+    end, { "i", "s" }),
     ["<C-Space>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
@@ -124,6 +137,7 @@ cmp.setup({
   }),
   sources = cmp.config.sources({
     { name = "nvim_lsp" },
+    { name = "ultisnips" },
     { name = "luasnip" },
     { name = "vsnip" },
     { name = "buffer" },
