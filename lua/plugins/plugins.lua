@@ -1,9 +1,6 @@
 return {
 	"folke/which-key.nvim",
 	{
-		"morhetz/gruvbox",
-	},
-	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate"
 	},
