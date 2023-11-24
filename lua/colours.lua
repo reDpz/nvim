@@ -12,13 +12,13 @@ highlight(0, 'TermCursor', { bg = '#fabd2f', fg = '#282828' })
 highlight(0, 'Cursor', { bg = '#fabd2f', fg = '#282828' })
 -- vim highlights
 vim.api.nvim_set_hl(0, "LineNr", { fg = "#7c6f64", bg = 'none' })
-highlight(0, 'CursorLineNr', { fg = '#fabd2f', bg = lineBg })
+highlight(0, 'CursorLineNr', { fg = '#fabd2f', bg = 'none' })
 
 vim.api.nvim_set_hl(0, "Visual", { bg = "#d79921", fg = "#282828"})
 vim.api.nvim_set_hl(0, "Todo", { fg = "#282828", bg = "#fabd2f", italic = true, bold = true })
 -- vim.api.nvim_set_hl(0, 'EndOfLineMarker', { bg = lineBg })
 vim.api.nvim_set_hl(0, 'SignColumn', { bg = 'none' })
-vim.api.nvim_set_hl(0, 'CursorLineSign', { bg = lineBg })
+vim.api.nvim_set_hl(0, 'CursorLineSign', { bg = 'none' })
 vim.api.nvim_set_hl(0, 'EndOfBuffer', { fg = 'none' })
 highlight(0, 'Search', { fg = '#282828', bg = '#fe8019' })
 
