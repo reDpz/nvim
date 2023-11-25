@@ -137,8 +137,8 @@ cmp.setup({
   }),
   sources = cmp.config.sources({
     { name = "nvim_lsp" },
-    { name = "ultisnips" },
     { name = "luasnip" },
+    { name = "ultisnips" },
     { name = "vsnip" },
     { name = "buffer" },
     { name = "path" },

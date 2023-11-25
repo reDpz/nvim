@@ -38,7 +38,11 @@ return {
         Linenr = {fg = '#7c6f64', bg = ""},
         debugPC = {fg = '', bg = "#3d4220"},
         DapBreakpoint = {fg = '', bg = '#472322'},
-        DapBreakpointSymbol = {bg = ''}
+        DapBreakpointSymbol = {bg = ''},
+        CmpItemAbbrMatch = { link = "GruvboxYellowBold" },
+        --[[ NoiceLspProgressClient = {link = "NormalFloat"},
+        NoiceLspProgressTitle = {link = "NormalFloat"},
+        NoiceLspProgressSpinner = {link = "NormalFloat"}, ]]
       },
       dim_inactive = false,
       transparent_mode = false,

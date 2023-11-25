@@ -69,23 +69,18 @@ keymap('n', '<leader>l', '<cmd>TroubleToggle<cr>')
 -- Color picker
 local opts = { noremap = true, silent = true }
 
-vim.keymap.set("n", "<C-c>", "<cmd>PickColor<cr>", opts)
-vim.keymap.set("i", "<C-c>", "<cmd>PickColorInsert<cr>", opts)
+-- vim.keymap.set("n", "<C-c>", "<cmd>PickColor<cr>", opts)
+-- vim.keymap.set("i", "<C-c>", "<cmd>PickColorInsert<cr>", opts)
 
--- terminal
-keymap('n', '<leader>t', '<cmd>ToggleTerm<cr>')
-keymap("n", "<leader>g", "<cmd>lua gorun_toggle()<CR>", { noremap = true, silent = true })
-
-local opts = { buffer = 0 }
-keymap('t', '<C-k>', [[<cmd>wincmd k<cr>]], opts)
+keymap("n", "<leader>gt", "<cmd>Gitsigns toggle_linehl<CR> <BAR> <cmd> Gitsigns toggle_current_line_blame<CR>", opts)
 
 -- Lspsaga
 keymap('n', 'gd', '<cmd>Lspsaga goto_definition<CR>')
 keymap('n', 'gD', '<cmd>Lspsaga peek_definition<CR>')
-keymap({'n','t','i'}, '<C-p>', '<cmd>Lspsaga term_toggle<CR>')
+keymap({ 'n', 't', 'i' }, '<C-p>', '<cmd>Lspsaga term_toggle<CR>')
 keymap('n', 'r', '<cmd>Lspsaga rename<CR>')
-keymap({'n','i'}, '<C-n>', '<cmd>Lspsaga hover_doc<CR>')
-keymap('n','<S-Tab>', '<cmd>Lspsaga outline<CR>')
+keymap({ 'n', 'i' }, '<C-n>', '<cmd>Lspsaga hover_doc<CR>')
+keymap('n', '<S-Tab>', '<cmd>Lspsaga outline<CR>')
 
 -- diagnostics lspsaga
 keymap('n', '[d', '<cmd>Lspsaga diagnostic_jump_prev<CR>')
@@ -96,3 +91,5 @@ keymap('n', ']d', '<cmd>Lspsaga diagnostic_jump_next<CR>')
 
 keymap('n', '<leader>db', '<cmd>DapToggleBreakpoint<CR>')
 keymap('n', '<leader>dr', '<cmd>DapContinue<CR>')
+keymap('n', '<leader>dc', '<cmd>lua require("dap").set_breakpoint(vim.fn.input("Condition: "))<CR>')
+keymap('n', '<leader>dt', '<cmd>DapTerminate<CR>')

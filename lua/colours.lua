@@ -1,4 +1,3 @@
--- transparent background
 vim.cmd([[
 colorscheme gruvbox
 set cursorline
@@ -22,10 +21,6 @@ highlight(0, 'Search', { fg = '#282828', bg = '#fe8019' })
 -- syntax highlight
 
 -- diagnistics
-vim.api.nvim_set_hl(0, "DiagnosticSignWarn", {fg = '#fe8019', bg = 'none' })
-vim.api.nvim_set_hl(0, "DiagnosticSignInfo", {fg = '#83a598', bg = 'none' })
-vim.api.nvim_set_hl(0, "DiagnosticSignHint", {fg = '#8ec07c', bg = 'none' })
-vim.api.nvim_set_hl(0,"DiagnosticSignError", {fg = '#cc241d', bg = 'none' })
 
 vim.api.nvim_set_hl(0, "SagaLightBulb", { bg = 'none'})
 
@@ -35,6 +30,7 @@ highlight(0, 'LspCodeLens', { fg = '#928374' })
 
 
 -- cmp
+-- 
 vim.api.nvim_set_hl(0, 'Pmenu', {fg = '#ebdbb2', bg = '#1c1c1c'})
 vim.api.nvim_set_hl(0, 'SagaNormal', {bg = '#282828'})
 vim.api.nvim_set_hl(0, 'NormalFloat1', {bg = '#282828'})
@@ -50,18 +46,23 @@ vim.api.nvim_set_hl(0, "NoicePopup", { link = "Normal" })
 vim.api.nvim_set_hl(0, "NoiceCmdlinePopupTitle", { link = "String" })
 
 
--- make diagnoistics errors have squiggly underlines
-local hl_groups = { 'DiagnosticUnderlineError', "DiagnosticUnderlineWarn", "DiagnosticUnderlineInfo" }
-for _, hl in ipairs(hl_groups) do
-  vim.cmd.highlight(hl .. ' gui=undercurl')
-end
 
 vim.fn.sign_define('DapBreakpoint',
     {
         text='', -- nerdfonts icon here
         texthl='DapBreakpointSymbol',
         linehl='DapBreakpoint',
-    })
+    }
+)
+
+vim.fn.sign_define('DapBreakpointCondition',
+    {
+        text='', -- nerdfonts icon here
+        texthl='DapBreakpointSymbol',
+        linehl='DapBreakpoint',
+    }
+)
+
 vim.fn.sign_define('DapStopped',
     {
         linehl='debugPC',
