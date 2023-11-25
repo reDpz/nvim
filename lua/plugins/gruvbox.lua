@@ -1,8 +1,8 @@
 return {
-  "gruvbox-community/gruvbox",
+  "ellisonleao/gruvbox.nvim",
   config = function()
     -- Default options:
-    --[[ require("gruvbox").setup({
+    require("gruvbox").setup({
       terminal_colors = true, -- add neovim terminal colors
       undercurl = true,
       underline = true,
@@ -31,10 +31,15 @@ return {
         GruvboxRedSign = { bg = "" },
         GruvboxBlueSign = { bg = "" },
         GruvboxAquaSign = { bg = "" },
+        TelescopeSelection = { link = "TermCursor" },
+        ["@variable"] = { link = "GruvboxYellow" },
+        TermCursor = { bg = '#fabd2f', fg = '#282828' },
+        Visual = {bg = '#d79921', fg = '#282828'},
+        Linenr = {fg = '#7c6f64', bg = ""},
       },
       dim_inactive = false,
       transparent_mode = false,
-    })]]
+    })
     vim.cmd("colorscheme gruvbox")
   end
 }
