@@ -56,6 +56,16 @@ for _, hl in ipairs(hl_groups) do
   vim.cmd.highlight(hl .. ' gui=undercurl')
 end
 
+vim.fn.sign_define('DapBreakpoint',
+    {
+        text='', -- nerdfonts icon here
+        texthl='DapBreakpointSymbol',
+        linehl='DapBreakpoint',
+    })
+vim.fn.sign_define('DapStopped',
+    {
+        linehl='debugPC',
+    })
 -- no bg on bufferline
 -- highlight(0, 'BufferlineFill', {bg = 'none'})
 

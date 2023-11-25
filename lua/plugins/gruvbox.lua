@@ -36,6 +36,9 @@ return {
         TermCursor = { bg = '#fabd2f', fg = '#282828' },
         Visual = {bg = '#d79921', fg = '#282828'},
         Linenr = {fg = '#7c6f64', bg = ""},
+        debugPC = {fg = '', bg = "#3d4220"},
+        DapBreakpoint = {fg = '', bg = '#472322'},
+        DapBreakpointSymbol = {bg = ''}
       },
       dim_inactive = false,
       transparent_mode = false,
