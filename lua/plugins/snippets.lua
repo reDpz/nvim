@@ -10,5 +10,5 @@ return {
     'hrsh7th/cmp-vsnip',
     dependencies = { 'hrsh7th/vim-vsnip', 'hrsh7th/vim-vsnip-integ' }
   },
-  { 'SirVer/ultisnips', dependencies = { 'quangnguyen30192/cmp-nvim-ultisnips' }}
+  -- { 'SirVer/ultisnips', dependencies = { 'quangnguyen30192/cmp-nvim-ultisnips' }}
 }

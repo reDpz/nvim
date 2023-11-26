@@ -53,7 +53,7 @@ return {
 		dependencies = {
 			-- LSP Support
 			{ 'neovim/nvim-lspconfig' }, -- Required
-			{                 -- Optional
+			{                   -- Optional
 				'williamboman/mason.nvim',
 				build = function()
 					pcall(vim.cmd, 'MasonUpdate')
@@ -74,11 +74,11 @@ return {
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		main = "ibl",
-		opts = {
+		--[[ opts = {
 			show_current_context = true,
 			show_current_context_start = false,
 
-		},
+		}, ]]
 		config = function()
 			local highlight = {
 				"Whitespace",
@@ -89,8 +89,8 @@ return {
 				-- show_current_context_start = false,
 				indent = {
 					char = "┆",
-					-- tab_char = { "a", "b", "c" },
 					highlight = highlight,
+					smart_indent_cap = true,
 				},
 
 				whitespace = {
@@ -98,7 +98,11 @@ return {
 					remove_blankline_trail = true,
 				},
 
-				scope = { enabled = true, },
+				scope = {
+					enabled = true,
+					show_end = false,
+					show_start = true,
+				},
 			}
 		end
 	},

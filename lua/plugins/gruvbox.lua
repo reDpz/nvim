@@ -34,15 +34,45 @@ return {
         TelescopeSelection = { link = "Visual" },
         ["@variable"] = { link = "GruvboxBlue" },
         TermCursor = { bg = '#fabd2f', fg = '#282828' },
-        Visual = {bg = '#d79921', fg = '#282828'},
-        Linenr = {fg = '#7c6f64', bg = ""},
-        debugPC = {fg = '', bg = "#3d4220"},
-        DapBreakpoint = {fg = '', bg = '#472322'},
-        DapBreakpointSymbol = {bg = ''},
+        Visual = { bg = '#d79921', fg = '#282828' },
+        Linenr = { fg = '#7c6f64', bg = "" },
+        CursorLineNr = { fg = '#fabd2f', bg = '' },
+        CursorLineSign = { bg = '' },
+        EndOfBuffer = {bg = ''},
+        debugPC = { fg = '', bg = "#3d4220" },
+        DapBreakpoint = { fg = '', bg = '#472322' },
+        DapBreakpointSymbol = { bg = '' },
         CmpItemAbbrMatch = { link = "GruvboxYellowBold" },
         --[[ NoiceLspProgressClient = {link = "NormalFloat"},
         NoiceLspProgressTitle = {link = "NormalFloat"},
         NoiceLspProgressSpinner = {link = "NormalFloat"}, ]]
+
+        -- Lsp Saga
+        SagaLightBulb = { bg = '' },
+        SagaNormal = { bg = '#282828' },
+
+        TelescopeMatching = { bold = true },
+
+        -- Noice
+        NoiceCmdlinePopupBorder = { link = 'NvimNumberPrefix' },
+        NoiceCmdlineIcon = { link = 'CmpItemMenu' },
+        NoicePopup = { link = 'Normal' },
+        NoiceCmdlinePopupTitle = { link = 'String' },
+
+        -- Cmp
+        Pmenu = { fg = '#ebdbb2', bg = "#1c1c1c" },
+        PmenuSel = { link = 'TermCursor' },
+
+        -- Whichkey
+        WhichKeyBorder = { bg = '#282828', fg = '#fabd2f' },
+        WhichKeyFloat = { link = 'WhichKeyBorder' },
+
+        -- Nvim tree
+        NvimTreeNormal = { bg = '#1c1c1c' },
+
+        -- indent blankline
+        IblScope = { fg = '#7c6f64', bold = true }
+
       },
       dim_inactive = false,
       transparent_mode = false,
