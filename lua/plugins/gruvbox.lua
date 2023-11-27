@@ -31,14 +31,12 @@ return {
         GruvboxRedSign = { bg = "" },
         GruvboxBlueSign = { bg = "" },
         GruvboxAquaSign = { bg = "" },
-        TelescopeSelection = { link = "Visual" },
         ["@variable"] = { link = "GruvboxBlue" },
         TermCursor = { bg = '#fabd2f', fg = '#282828' },
         Visual = { bg = '#d79921', fg = '#282828' },
         Linenr = { fg = '#7c6f64', bg = "" },
         CursorLineNr = { fg = '#fabd2f', bg = '' },
         CursorLineSign = { bg = '' },
-        EndOfBuffer = {bg = ''},
         debugPC = { fg = '', bg = "#3d4220" },
         DapBreakpoint = { fg = '', bg = '#472322' },
         DapBreakpointSymbol = { bg = '' },
@@ -51,7 +49,10 @@ return {
         SagaLightBulb = { bg = '' },
         SagaNormal = { bg = '#282828' },
 
+        -- telescope
+        TelescopeSelection = { link = "Visual" },
         TelescopeMatching = { bold = true },
+        TelescopePromptPrefix = { link = 'TelescopeSelection'},
 
         -- Noice
         NoiceCmdlinePopupBorder = { link = 'NvimNumberPrefix' },
