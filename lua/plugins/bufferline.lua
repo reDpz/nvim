@@ -1,7 +1,8 @@
 return {
     'akinsho/bufferline.nvim',
     version = "*",
-    dependencies = 'nvim-tree/nvim-web-devicons',
+    -- colourscheme dependency needs to be added otherwise it wont work
+    dependencies = {'ellisonleao/gruvbox.nvim','nvim-tree/nvim-web-devicons'},
     config = function()
         require('bufferline').setup {
             options = {
@@ -18,5 +19,5 @@ return {
                 },
             }
         }
-    end
+    end,
 }

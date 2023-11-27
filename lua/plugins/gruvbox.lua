@@ -74,6 +74,8 @@ return {
         -- indent blankline
         IblScope = { fg = '#7c6f64', bold = true }
 
+
+
       },
       dim_inactive = false,
       transparent_mode = false,
