@@ -1,6 +1,10 @@
 return {
   "ellisonleao/gruvbox.nvim",
   config = function()
+    -- enable/disable transparency
+
+    local defBG = '#282828'
+
     -- Default options:
     require("gruvbox").setup({
       terminal_colors = true, -- add neovim terminal colors
@@ -24,35 +28,38 @@ return {
       palette_overrides = {},
       overrides = {
         SignColumn = { link = "Normal" },
-        GruvboxGreenSign = { bg = "" },
-        GruvboxOrangeSign = { bg = "" },
-        GruvboxPurpleSign = { bg = "" },
-        GruvboxYellowSign = { bg = "" },
-        GruvboxRedSign = { bg = "" },
-        GruvboxBlueSign = { bg = "" },
-        GruvboxAquaSign = { bg = "" },
+        GruvboxGreenSign = { bg = defBG },
+        GruvboxOrangeSign = { bg = defBG },
+        GruvboxPurpleSign = { bg = defBG },
+        GruvboxYellowSign = { bg = defBG },
+        GruvboxRedSign = { bg = defBG },
+        GruvboxBlueSign = { bg = defBG },
+        GruvboxAquaSign = { bg = defBG },
+        Normal = { bg = defBG },
+        NormalFloat = {bg = defBG},
         ["@variable"] = { link = "GruvboxBlue" },
         TermCursor = { bg = '#fabd2f', fg = '#282828' },
         Visual = { bg = '#d79921', fg = '#282828' },
-        Linenr = { fg = '#7c6f64', bg = "" },
-        CursorLineNr = { fg = '#fabd2f', bg = '' },
-        CursorLineSign = { bg = '' },
+        Linenr = { fg = '#7c6f64', bg = defBG },
+        CursorLineNr = { fg = '#fabd2f', bg = defBG },
+        CursorLineSign = { bg = defBG },
         debugPC = { fg = '', bg = "#3d4220" },
         DapBreakpoint = { fg = '', bg = '#472322' },
-        DapBreakpointSymbol = { bg = '' },
+        DapBreakpointSymbol = { bg = defBG },
         CmpItemAbbrMatch = { link = "GruvboxYellowBold" },
+        ["@type.qualifier"] = { link = "GruvboxAqua" },
         --[[ NoiceLspProgressClient = {link = "NormalFloat"},
         NoiceLspProgressTitle = {link = "NormalFloat"},
         NoiceLspProgressSpinner = {link = "NormalFloat"}, ]]
 
         -- Lsp Saga
-        SagaLightBulb = { bg = '' },
+        SagaLightBulb = { bg = defBG },
         SagaNormal = { bg = '#282828' },
 
         -- telescope
         TelescopeSelection = { link = "Visual" },
         TelescopeMatching = { bold = true },
-        TelescopePromptPrefix = { link = 'TelescopeSelection'},
+        TelescopePromptPrefix = { link = 'TelescopeSelection' },
 
         -- Noice
         NoiceCmdlinePopupBorder = { link = 'NvimNumberPrefix' },
@@ -71,8 +78,6 @@ return {
         -- Nvim tree
         NvimTreeNormal = { bg = '#1c1c1c' },
 
-        -- indent blankline
-        IblScope = { fg = '#7c6f64', bold = true }
 
 
 

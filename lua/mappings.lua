@@ -65,6 +65,7 @@ keymap('n', '.', '<cmd>Lspsaga code_action<CR>')
 -- tmux navigation in insert
 
 keymap('n', '<leader>l', '<cmd>TroubleToggle<cr>')
+keymap('n', '<leader>t', '<cmd>TodoTelescope<cr>')
 
 -- Color picker
 local opts = { noremap = true, silent = true }
@@ -93,3 +94,6 @@ keymap('n', '<leader>db', '<cmd>DapToggleBreakpoint<CR>')
 keymap('n', '<leader>dr', '<cmd>DapContinue<CR>')
 keymap('n', '<leader>dc', '<cmd>lua require("dap").set_breakpoint(vim.fn.input("Condition: "))<CR>')
 keymap('n', '<leader>dt', '<cmd>DapTerminate<CR>')
+
+-- zen mode
+keymap('n', '<leader>z', '<cmd>ZenMode<CR>')

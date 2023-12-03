@@ -46,12 +46,12 @@ vim.wo.fillchars='eob: '
 vim.cmd([[set fcs=eob:\ ]])
 
 -- Set background accordingly to how neovim has been started
-if vim.g.started_by_firenvim or vim.g.neovide then
+--[[ if vim.g.started_by_firenvim or vim.g.neovide then
 	vim.o.laststatus = 0
 else
 	vim.o.laststatus = 2
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-end
+end ]]
 
 -- allow error message to show properly
 
@@ -67,6 +67,8 @@ require('lualine').setup {
     },
   }
 }
+
+require('scripts')
 
 
 -- it was getting overwritten by something and im lazy so...

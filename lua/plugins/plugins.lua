@@ -88,7 +88,7 @@ return {
 				-- show_current_context = true,
 				-- show_current_context_start = false,
 				indent = {
-					char = "┆",
+					-- char = "┆",
 					highlight = highlight,
 					smart_indent_cap = true,
 				},
@@ -101,7 +101,9 @@ return {
 				scope = {
 					enabled = true,
 					show_end = false,
-					show_start = true,
+					show_start = false,
+					char = "▎",
+					highlight = "SpecialKey",
 				},
 			}
 		end
