@@ -59,6 +59,3 @@ vim.fn.sign_define('DapStopped',
 --
 
 
-local highlight = vim.api.nvim_set_hl
-
-
