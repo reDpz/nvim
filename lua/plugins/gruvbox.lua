@@ -4,6 +4,7 @@ return {
     -- enable/disable transparency
 
     local defBG = '#282828'
+    local sidebar = 'none'
 
     -- Default options:
     require("gruvbox").setup({
@@ -27,22 +28,23 @@ return {
       contrast = "",  -- can be "hard", "soft" or empty string
       palette_overrides = {},
       overrides = {
-        SignColumn = { link = "Normal" },
-        GruvboxGreenSign = { bg = defBG },
-        GruvboxOrangeSign = { bg = defBG },
-        GruvboxPurpleSign = { bg = defBG },
-        GruvboxYellowSign = { bg = defBG },
-        GruvboxRedSign = { bg = defBG },
-        GruvboxBlueSign = { bg = defBG },
-        GruvboxAquaSign = { bg = defBG },
+        SignColumn = { bg = sidebar},
+        GruvboxGreenSign = { bg = sidebar },
+        GruvboxOrangeSign = { bg = sidebar },
+        GruvboxPurpleSign = { bg = sidebar },
+        GruvboxYellowSign = { bg = sidebar },
+        GruvboxRedSign = { bg = sidebar },
+        GruvboxBlueSign = { bg = sidebar },
+        GruvboxAquaSign = { bg = sidebar },
         Normal = { bg = defBG },
         NormalFloat = {bg = defBG},
         ["@variable"] = { link = "GruvboxBlue" },
         TermCursor = { bg = '#fabd2f', fg = '#282828' },
         Visual = { bg = '#d79921', fg = '#282828' },
-        Linenr = { fg = '#7c6f64', bg = defBG },
-        CursorLineNr = { fg = '#fabd2f', bg = defBG },
-        CursorLineSign = { bg = defBG },
+        Linenr = { fg = '#7c6f64', bg = sidebar },
+        CursorLineNr = { fg = '#fabd2f', bg = sidebar },
+
+        CursorLineSign = { bg = sidebar },
         debugPC = { fg = '', bg = "#3d4220" },
         DapBreakpoint = { fg = '', bg = '#472322' },
         DapBreakpointSymbol = { bg = defBG },
