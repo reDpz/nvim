@@ -1,7 +1,4 @@
 vim.cmd([[
-set relativenumber
-set linebreak
-set number
 set clipboard=unnamedplus
 set cmdheight=0
 set splitright
@@ -26,6 +23,12 @@ set laststatus=3
 
 -- allows for folding headers in markdown
 vim.g.markdown_folding = 1
+
+-- show line numbers
+vim.o.number = true;
+vim.o.relativenumber = true;
+
+vim.o.linebreak = true;
 
 
 -- automatically change the directory
