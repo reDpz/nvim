@@ -1,5 +1,6 @@
 return {
   "ellisonleao/gruvbox.nvim",
+  enabled = false,
   config = function()
     -- enable/disable transparency
 

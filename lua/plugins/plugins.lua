@@ -74,6 +74,7 @@ return {
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		main = "ibl",
+		dependencies = {"Mofiqul/vscode.nvim"},
 		--[[ opts = {
 			show_current_context = true,
 			show_current_context_start = false,
@@ -81,8 +82,9 @@ return {
 		}, ]]
 		config = function()
 			local highlight = {
-				"Whitespace",
+				"IndentBlanklineChar",
 			}
+
 
 			require("ibl").setup {
 				-- show_current_context = true,
@@ -100,10 +102,10 @@ return {
 
 				scope = {
 					enabled = true,
-					show_end = false,
-					show_start = false,
+					show_end = true,
+					show_start = true,
 					char = "▎",
-					highlight = "SpecialKey",
+					highlight = "IndentBlanklineContextChar",
 				},
 			}
 		end
