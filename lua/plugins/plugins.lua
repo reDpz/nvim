@@ -74,7 +74,7 @@ return {
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		main = "ibl",
-		dependencies = {"Mofiqul/vscode.nvim"},
+		dependencies = {"Mofiqul/vscode.nvim", "Shatur/neovim-ayu",},
 		--[[ opts = {
 			show_current_context = true,
 			show_current_context_start = false,
@@ -82,14 +82,14 @@ return {
 		}, ]]
 		config = function()
 			local highlight = {
-				"IndentBlanklineChar",
+				"NonText",
 			}
 
 
 			require("ibl").setup {
 				-- show_current_context = true,
 				-- show_current_context_start = false,
-				indent = {
+				--[[ indent = {
 					-- char = "┆",
 					highlight = highlight,
 					smart_indent_cap = true,
@@ -99,14 +99,14 @@ return {
 					highlight = highlight,
 					remove_blankline_trail = true,
 				},
-
+]]
 				scope = {
 					enabled = true,
 					show_end = true,
 					show_start = true,
 					char = "▎",
-					highlight = "IndentBlanklineContextChar",
-				},
+					-- highlight = "Normal",
+				}
 			}
 		end
 	},

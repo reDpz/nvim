@@ -7,7 +7,7 @@ keymap("n", "|", "<cmd>split<CR>")
 keymap("n", "\\", "<cmd>vs<CR>")
 
 -- switch between buffers
-keymap('n', '[b', '<cmd>bp<CR>')
+keymap('n', '[b', '<cmd>bp<CR>', { desc = "Previous buffer" })
 keymap('n', ']b', '<cmd>bn<CR>')
 keymap('n', 'q', '<cmd>bd<CR>')
 
@@ -66,6 +66,8 @@ keymap('n', '.', '<cmd>Lspsaga code_action<CR>')
 
 keymap('n', '<leader>l', '<cmd>TroubleToggle<cr>')
 keymap('n', '<leader>t', '<cmd>TodoTelescope<cr>')
+keymap('n', '<leader>cs', '<cmd>Telescope colorscheme<cr>')
+keymap('n', '<leader>s', '<cmd>Telescope treesitter<cr>')
 
 -- Color picker
 local opts = { noremap = true, silent = true }
@@ -81,7 +83,11 @@ keymap('n', 'gD', '<cmd>Lspsaga peek_definition<CR>')
 keymap({ 'n', 't', 'i' }, '<C-p>', '<cmd>Lspsaga term_toggle<CR>')
 keymap('n', 'r', '<cmd>Lspsaga rename<CR>')
 keymap({ 'n', 'i' }, '<C-n>', '<cmd>Lspsaga hover_doc<CR>')
-keymap('n', '<S-Tab>', '<cmd>Lspsaga outline<CR>')
+-- keymap('n', '<S-Tab>', '<cmd>Lspsaga outline<CR>')
+--
+-- Outline
+keymap("n", "<S-Tab>", "<cmd>Outline<CR>", { desc = "Toggle Outline" })
+
 
 -- diagnostics lspsaga
 keymap('n', '[d', '<cmd>Lspsaga diagnostic_jump_prev<CR>')
