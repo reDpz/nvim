@@ -1,7 +1,9 @@
+local load = false;
+
 return {
   {
     "folke/tokyonight.nvim",
-    lazy = false,
+    lazy = load,
     -- priority = 1000,
     opts = {},
     config = function()
@@ -44,10 +46,23 @@ return {
   },
   {
     "xero/miasma.nvim",
-    -- lazy = false,
+    lazy = load,
     -- priority = 1000,
-  }, 
+  },
   {
-  "zootedb0t/citruszest.nvim",
-},
+    "zootedb0t/citruszest.nvim",
+    lazy = load,
+  },
+  {
+    'srcery-colors/srcery-vim',
+    lazy = load,
+  },
+  {
+    "EdenEast/nightfox.nvim",
+    lazy = load,
+  },
+  {
+    "rebelot/kanagawa.nvim",
+    lazy = load,
+  }
 }
