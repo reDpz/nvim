@@ -1,5 +1,6 @@
 return {
     "RRethy/vim-illuminate",
+    enabled = false,
     config = function()
         -- default configuration
         require('illuminate').configure({
