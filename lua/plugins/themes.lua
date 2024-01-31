@@ -64,5 +64,18 @@ return {
   {
     "rebelot/kanagawa.nvim",
     lazy = load,
-  }
+  },
+  {
+    "navarasu/onedark.nvim",
+    lazy = load,
+    config = function()
+      require('onedark').setup {
+        style = 'warmer'
+      }
+    end
+  },
+  {
+    "olimorris/onedarkpro.nvim",
+    lazy = load,
+  },
 }
