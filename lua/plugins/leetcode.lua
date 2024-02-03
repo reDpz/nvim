@@ -13,5 +13,7 @@ return {
     },
     opts = {
         -- configuration goes here
+        arg = "l",
+        lang = "java",
     },
 }
