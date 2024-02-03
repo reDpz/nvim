@@ -75,6 +75,9 @@ return {
 		"lukas-reineke/indent-blankline.nvim",
 		main = "ibl",
 		dependencies = {"Mofiqul/vscode.nvim", "Shatur/neovim-ayu",},
+		lazy = true,
+		event = {"UIEnter"},
+		enabled = false,
 		--[[ opts = {
 			show_current_context = true,
 			show_current_context_start = false,
