@@ -7,8 +7,13 @@ return {
 
     local defBG = '#282828'
     local sidebar = 'none'
+    local prefixBG = "#3c3836"
+    local TelescopeBG = "#32302F"
+    local bg = "#282828"
+    local bgDarker = "#252626"
 
     -- Default options:
+    
     require("gruvbox").setup({
       terminal_colors = true, -- add neovim terminal colors
       undercurl = true,
@@ -26,11 +31,11 @@ return {
       invert_signs = false,
       invert_tabline = false,
       invert_intend_guides = false,
-      inverse = true, -- invert background for search, diffs, statuslines and errors
-      contrast = "hard",  -- can be "hard", "soft" or empty string
+      inverse = true,    -- invert background for search, diffs, statuslines and errors
+      contrast = "hard", -- can be "hard", "soft" or empty string
       palette_overrides = {},
       overrides = {
-        SignColumn = { bg = sidebar},
+        SignColumn = { bg = sidebar },
         GruvboxGreenSign = { bg = sidebar },
         GruvboxOrangeSign = { bg = sidebar },
         GruvboxPurpleSign = { bg = sidebar },
@@ -39,10 +44,10 @@ return {
         GruvboxBlueSign = { bg = sidebar },
         GruvboxAquaSign = { bg = sidebar },
         Normal = { bg = defBG },
-        NormalFloat = {bg = defBG},
+        NormalFloat = { bg = defBG },
         ["@variable"] = { link = "GruvboxBlue" },
         TermCursor = { bg = '#fabd2f', fg = '#282828' },
-        Visual = { bg = '#d79921', fg = '#282828' },
+        Visual = { bg = '#5D4D2A' },
         Linenr = { fg = '#7c6f64', bg = sidebar },
         CursorLineNr = { fg = '#fabd2f', bg = sidebar },
 
@@ -63,7 +68,21 @@ return {
         -- telescope
         TelescopeSelection = { link = "Visual" },
         TelescopeMatching = { bold = true },
-        TelescopePromptPrefix = { link = 'TelescopeSelection' },
+        
+        -- borderless
+        -- Prompt
+        TelescopePromptPrefix = { bg = prefixBG},
+        TelescopePromptNormal = { bg = prefixBG},
+        TelescopePromptBorder = { bg = prefixBG, fg = prefixBG},
+        TelescopePromptTitle = { fg = bg, bg = "#fabd2f"},
+        -- Results
+        TelescopeResultsNormal = { bg = TelescopeBG},
+        TelescopeResultsBorder = { bg =TelescopeBG, fg = TelescopeBG},
+        TelescopeResultsTitle = {fg = TelescopeBG, bg = TelescopeBG},
+        -- Preview
+        TelescopePreviewBorder = { bg =bgDarker, fg = bgDarker},
+        TelescopePreviewNormal = { bg =bgDarker, fg = bgDarker},
+        TelescopePreviewtitle = {bg = "#b8bb26", fg = bg},
 
         -- Noice
         NoiceCmdlinePopupBorder = { link = 'NvimNumberPrefix' },
