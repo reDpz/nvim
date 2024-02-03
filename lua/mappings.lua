@@ -96,6 +96,7 @@ keymap('n', ']d', '<cmd>Lspsaga diagnostic_jump_next<CR>', {desc = "Next diagnos
 
 -- dap
 
+-- keymap('n', '<leader>d', {desc = "Debug"})
 keymap('n', '<leader>db', '<cmd>DapToggleBreakpoint<CR>', {desc = "Set a breakpoint"})
 keymap('n', '<leader>dr', '<cmd>DapContinue<CR>', {desc = "Start/resume debugger"})
 keymap('n', '<leader>dc', '<cmd>lua require("dap").set_breakpoint(vim.fn.input("Condition: "))<CR>', {desc = "Set a conditional breakpoint"})
