@@ -1,5 +1,0 @@
- ⦿ return
-  ├ 𝓐 [1]
-  ├ ⊨ lazy
-    config
-     ⦿ require("outline").setup
