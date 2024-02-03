@@ -1,10 +1,13 @@
 return {
 	{
-		'startup-nvim/startup.nvim',
-		dependencies = { 'nvim-telescope/telescope.nvim', 'nvim-lua/plenary.nvim' },
+		'nvimdev/dashboard-nvim',
+		event = 'VimEnter',
 		config = function()
-			require'startup'.setup()
-		end
+			require('dashboard').setup {
+				-- config
+			}
+		end,
+		dependencies = { { 'nvim-tree/nvim-web-devicons' } }
 	},
 	{
 		'vladdoster/remember.nvim',
