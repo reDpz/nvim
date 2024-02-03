@@ -1,6 +1,12 @@
-return{
-    'nvim-telescope/telescope.nvim', tag = '0.1.4',
-    dependencies = { 'nvim-lua/plenary.nvim' },
+return {
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.4',
+    lazy = true,
+    cmd = "Telescope",
+    dependencies = {
+        'andrew-george/telescope-themes',
+        'nvim-lua/plenary.nvim'
+    },
     config = function()
         local builtin = require('telescope.builtin')
         vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
@@ -8,14 +14,23 @@ return{
         vim.keymap.set('n', '<leader>fr', builtin.search_history, {})
         vim.keymap.set('n', '<leader>of', builtin.oldfiles, {})
         vim.keymap.set('n', '<leader>rg', builtin.live_grep, {})
-        require('telescope').setup {
+
+
+        require("telescope").setup {
             defaults = {
-                theme = "dropdown",
-                window = {
-                    border = "single"
-                }
-            }
+                theme = "center",
+                sorting_strategy = "ascending",
+                layout_config = {
+                    horizontal = {
+                        prompt_position = "top",
+                        preview_width = 0.5,
+                    },
+                },
+            },
         }
-    end
+
+
+        require('telescope').load_extension('themes')
+    end,
 
 }
