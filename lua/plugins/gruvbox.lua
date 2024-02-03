@@ -81,7 +81,7 @@ return {
         TelescopeResultsTitle = {fg = TelescopeBG, bg = TelescopeBG},
         -- Preview
         TelescopePreviewBorder = { bg =bgDarker, fg = bgDarker},
-        TelescopePreviewNormal = { bg =bgDarker, fg = bgDarker},
+        TelescopePreviewNormal = { bg =bgDarker},
         TelescopePreviewtitle = {bg = "#b8bb26", fg = bg},
 
         -- Noice
