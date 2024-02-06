@@ -1,9 +1,13 @@
-local load = false;
+local load = true;
+local events = {"VeryLazy"}
+local cmd = {"Telescope"}
 
 return {
   {
     "folke/tokyonight.nvim",
     lazy = load,
+    event = events,
+    -- cmd = cmd,
     -- priority = 1000,
     opts = {},
     config = function()
@@ -47,27 +51,39 @@ return {
   {
     "xero/miasma.nvim",
     lazy = load,
+    event = events,
+    -- cmd = cmd,
     -- priority = 1000,
   },
   {
     "zootedb0t/citruszest.nvim",
     lazy = load,
+    event = events,
+    -- cmd = cmd,
   },
   {
     'srcery-colors/srcery-vim',
     lazy = load,
+    event = events,
+    -- cmd = cmd,
   },
   {
     "EdenEast/nightfox.nvim",
     lazy = load,
+    -- cmd = cmd,
+    event = events,
   },
   {
     "rebelot/kanagawa.nvim",
     lazy = load,
+    -- cmd = cmd,
+    event = events,
   },
   {
     "navarasu/onedark.nvim",
     lazy = load,
+    event = events,
+    -- cmd = cmd,
     config = function()
       require('onedark').setup {
         style = 'warmer'
@@ -77,5 +93,7 @@ return {
   {
     "olimorris/onedarkpro.nvim",
     lazy = load,
+    event = events,
+    -- cmd = cmd,
   },
 }

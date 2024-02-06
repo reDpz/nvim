@@ -9,18 +9,23 @@ return {
 		'neovim/nvim-lspconfig'
 	},
 	{
-		'hrsh7th/cmp-nvim-lsp'
+		'hrsh7th/cmp-nvim-lsp',
+		event = {"VeryLazy"},
 	},
 	{
+		event = {"VeryLazy"},
 		'hrsh7th/cmp-buffer'
 	},
 	{
+		event = {"VeryLazy"},
 		'hrsh7th/cmp-path'
 	},
 	{
+		event = {"VeryLazy"},
 		'hrsh7th/cmp-cmdline'
 	},
 	{
+		event = {"VeryLazy"},
 		'hrsh7th/nvim-cmp',
 
 	},
@@ -76,8 +81,8 @@ return {
 		main = "ibl",
 		dependencies = {"Mofiqul/vscode.nvim", "Shatur/neovim-ayu",},
 		lazy = true,
-		event = {"UIEnter"},
-		enabled = false,
+		event = {"VeryLazy"},
+		enabled = true,
 		--[[ opts = {
 			show_current_context = true,
 			show_current_context_start = false,
