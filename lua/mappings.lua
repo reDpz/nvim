@@ -64,7 +64,7 @@ keymap('n', '.', '<cmd>Lspsaga code_action<CR>', {desc = "Code action"})
 
 -- tmux navigation in insert
 
-keymap('n', '<leader>l', '<cmd>TroubleToggle<cr>', {desc = "Toggle problems"})
+keymap('n', '<leader>pt', '<cmd>TroubleToggle<cr>', {desc = "Toggle problems"})
 keymap('n', '<leader>t', '<cmd>TodoTelescope<cr>', {desc = "Search todo"})
 keymap('n', '<leader>cs', '<cmd>Telescope colorscheme<cr>', {desc = "Search colour schemes"})
 keymap('n', '<leader>s', '<cmd>Telescope treesitter<cr>', {desc = "Search objects"})
@@ -76,7 +76,9 @@ local opts = { noremap = true, silent = true }
 -- vim.keymap.set("n", "<C-c>", "<cmd>PickColor<cr>", opts)
 -- vim.keymap.set("i", "<C-c>", "<cmd>PickColorInsert<cr>", opts)
 
+-- git utils
 keymap("n", "<leader>gt", "<cmd>Gitsigns toggle_linehl<CR> <BAR> <cmd> Gitsigns toggle_current_line_blame<CR>", opts)
+keymap("n", "<leader>lg", '<cmd>lua require("lazy.util").float_term("lazygit")<CR>', {desc = "Open lazy git (in current directory)"})
 
 -- Lspsaga
 keymap('n', 'gd', '<cmd>Lspsaga goto_definition<CR>', {desc = "Go to definition (LspSaga)"})
