@@ -1,7 +1,8 @@
 return {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.4',
-    lazy = true,
+    lazy = false,
+    priority = 999,
     cmd = "Telescope",
     dependencies = {
         'andrew-george/telescope-themes',

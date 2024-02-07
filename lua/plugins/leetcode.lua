@@ -1,5 +1,7 @@
+local leet_arg = "l"
 return {
     "kawre/leetcode.nvim",
+    lazy = leet_arg ~= vim.fn.argv()[1],
     build = ":TSUpdate html",
     dependencies = {
         "nvim-telescope/telescope.nvim",
@@ -13,7 +15,7 @@ return {
     },
     opts = {
         -- configuration goes here
-        arg = "l",
+        arg = leet_arg,
         lang = "java",
     },
 }

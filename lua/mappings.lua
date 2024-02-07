@@ -68,6 +68,7 @@ keymap('n', '<leader>l', '<cmd>TroubleToggle<cr>', {desc = "Toggle problems"})
 keymap('n', '<leader>t', '<cmd>TodoTelescope<cr>', {desc = "Search todo"})
 keymap('n', '<leader>cs', '<cmd>Telescope colorscheme<cr>', {desc = "Search colour schemes"})
 keymap('n', '<leader>s', '<cmd>Telescope treesitter<cr>', {desc = "Search objects"})
+keymap('n', '<leader><leader>', '<cmd>Telescope<cr>', {desc = "Telescope search"})
 
 -- Color picker
 local opts = { noremap = true, silent = true }
