@@ -1,6 +1,6 @@
 local load = true;
-local events = {"VeryLazy"}
-local cmd = {"Telescope"}
+local events = { "VeryLazy" }
+local cmd = { "Telescope" }
 
 return {
   {
@@ -96,4 +96,45 @@ return {
     event = events,
     -- cmd = cmd,
   },
+  {
+    "catppuccin/nvim",
+    lazy = load,
+    event = events,
+    name = "catppuccin",
+    opts = {
+      transparent_background = false,
+      no_italic = true,
+      no_bold = false,
+      integrations = {
+        harpoon = true,
+        fidget = true,
+        cmp = true,
+        flash = true,
+        gitsigns = true,
+        illuminate = true,
+        indent_blankline = { enabled = true },
+        lsp_trouble = true,
+        mason = true,
+        mini = true,
+        native_lsp = {
+          enabled = true,
+          underlines = {
+            errors = { "undercurl" },
+            hints = { "undercurl" },
+            warnings = { "undercurl" },
+            information = { "undercurl" },
+          },
+        },
+        navic = { enabled = true, custom_bg = "lualine" },
+        neotest = true,
+        noice = true,
+        notify = true,
+        neotree = true,
+        semantic_tokens = true,
+        telescope = true,
+        treesitter = true,
+        which_key = true,
+      },
+    },
+  }
 }

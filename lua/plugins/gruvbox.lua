@@ -10,7 +10,7 @@ return {
     local prefixBG = "#3c3836"
     local TelescopeBG = "#32302F"
     local bg = "#282828"
-    local bgDarker = "#252626"
+    local bgDarker = "#1d2021"
 
     -- Default options:
     
@@ -32,7 +32,7 @@ return {
       invert_tabline = false,
       invert_intend_guides = false,
       inverse = true,    -- invert background for search, diffs, statuslines and errors
-      contrast = "hard", -- can be "hard", "soft" or empty string
+      contrast = "", -- can be "hard", "soft" or empty string
       palette_overrides = {},
       overrides = {
         SignColumn = { bg = sidebar },
@@ -44,7 +44,7 @@ return {
         GruvboxBlueSign = { bg = sidebar },
         GruvboxAquaSign = { bg = sidebar },
         Normal = { bg = defBG },
-        NormalFloat = { bg = defBG },
+        NormalFloat = { bg = "#282828" },
         ["@variable"] = { link = "GruvboxBlue" },
         TermCursor = { bg = '#fabd2f', fg = '#282828' },
         Visual = { bg = '#5D4D2A' },
@@ -63,7 +63,7 @@ return {
 
         -- Lsp Saga
         SagaLightBulb = { bg = defBG },
-        SagaNormal = { bg = '#282828' },
+        -- SagaNormal = { bg = '#282828' },
 
         -- telescope
         TelescopeSelection = { link = "Visual" },
@@ -108,6 +108,5 @@ return {
       dim_inactive = false,
       transparent_mode = false,
     })
-    vim.cmd("colorscheme gruvbox")
   end
 }
