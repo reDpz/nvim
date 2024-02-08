@@ -35,6 +35,7 @@ return {
       contrast = "", -- can be "hard", "soft" or empty string
       palette_overrides = {},
       overrides = {
+        Function = {italic = true},
         SignColumn = { bg = sidebar },
         GruvboxGreenSign = { bg = sidebar },
         GruvboxOrangeSign = { bg = sidebar },
