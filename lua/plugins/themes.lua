@@ -103,8 +103,11 @@ return {
     name = "catppuccin",
     opts = {
       transparent_background = false,
-      no_italic = true,
+      no_italic = false,
       no_bold = false,
+      styles = {
+        strings = { "italic" },
+      },
       integrations = {
         harpoon = true,
         fidget = true,
@@ -135,6 +138,33 @@ return {
         treesitter = true,
         which_key = true,
       },
+      color_overrides = {
+        mocha = {
+          base = "#1E1D23",
+          mantle = "#22222a",
+          crust = "#151519"
+        }
+      },
+      highlight_overrides = {
+        mocha = function()
+          local mocha = require("catppuccin.palettes").get_palette "mocha"
+          return {
+            -- Prompt
+            TelescopePromptPrefix = { bg = mocha.mantle },
+            TelescopePromptNormal = { bg = mocha.mantle },
+            TelescopePromptBorder = { bg = mocha.mantle, fg = mocha.mantle },
+            TelescopePromptTitle = { fg = mocha.base, bg = mocha.teal},
+            -- Results
+            TelescopeResultsNormal = { bg = mocha.crust },
+            TelescopeResultsBorder = { bg = mocha.crust, fg = mocha.crust },
+            TelescopeResultsTitle = { fg = mocha.crust, bg = mocha.crust },
+            -- Preview
+            TelescopePreviewBorder = { bg = mocha.mantle, fg = mocha.mantle },
+            TelescopePreviewNormal = { bg = mocha.mantle },
+            TelescopePreviewtitle = { bg = mocha.rosewater, fg = mocha.base },
+          }
+        end
+      }
     },
   }
 }

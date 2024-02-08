@@ -24,9 +24,9 @@ return {
 				header = logo,
 				items = {
 					new_section("Find file", "Telescope find_files", "Telescope"),
-					new_section("Recent files", "Telescope oldfiles", "Telescope"),
+					new_section("Old files", "Telescope oldfiles", "Telescope"),
 					new_section("Grep text", "Telescope live_grep", "Telescope"),
-					new_section("Config", "lua require('notlazy.util').telescope.config_files()()", "Config"),
+					new_section("Config", "lua require('telescope.builtin').oldfiles({cwd = vim.fn.stdpath(\"config\") })", "Config"),
 					new_section("Extras", "LazyExtras", "Config"),
 					new_section("Lazy", "Lazy", "Config"),
 					new_section("New file", "ene | startinsert", "Built-in"),

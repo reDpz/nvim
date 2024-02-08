@@ -10,7 +10,7 @@ return {
     local prefixBG = "#3c3836"
     local TelescopeBG = "#32302F"
     local bg = "#282828"
-    local bgDarker = "#1d2021"
+    local bgDarker = "#252626"
 
     -- Default options:
     
