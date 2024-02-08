@@ -67,7 +67,8 @@ keymap('n', '.', '<cmd>Lspsaga code_action<CR>', {desc = "Code action"})
 keymap('n', '<leader>pt', '<cmd>TroubleToggle<cr>', {desc = "Toggle problems"})
 keymap('n', '<leader>t', '<cmd>TodoTelescope<cr>', {desc = "Search todo"})
 keymap('n', '<leader>cs', '<cmd>Telescope colorscheme<cr>', {desc = "Search colour schemes"})
-keymap('n', '<leader>s', '<cmd>Telescope treesitter<cr>', {desc = "Search objects"})
+keymap('n', '<leader>s', '<cmd>Telescope lsp_document_symbols<cr>', {desc = "Search symbols"})
+keymap('n', '<leader>s', '<cmd>Telescope lsp_references<cr>', {desc = "Search references"})
 keymap('n', '<leader><leader>', '<cmd>Telescope<cr>', {desc = "Telescope search"})
 
 -- Color picker
