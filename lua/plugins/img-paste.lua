@@ -1,4 +1,6 @@
 return {
+    -- lazy = true,
+    ft = {"markdown"},
     'img-paste-devs/img-paste.vim',
     config = function ()
         vim.cmd([[

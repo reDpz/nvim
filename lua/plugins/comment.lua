@@ -12,6 +12,7 @@ return {
 			}
 		},
 		lazy = false,
+		-- event = "LazyFile"
 		-- config = function()
 			-- require('Comment').setup({
 				-- toggler = {

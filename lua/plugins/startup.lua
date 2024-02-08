@@ -26,7 +26,7 @@ return {
 					new_section("Find file", "Telescope find_files", "Telescope"),
 					new_section("Old files", "Telescope oldfiles", "Telescope"),
 					new_section("Grep text", "Telescope live_grep", "Telescope"),
-					new_section("Config", "lua require('telescope.builtin').oldfiles({cwd = vim.fn.stdpath(\"config\") })", "Config"),
+					new_section("Config", "lua require('telescope.builtin').find_files({cwd = vim.fn.stdpath(\"config\") })", "Config"),
 					new_section("Extras", "LazyExtras", "Config"),
 					new_section("Lazy", "Lazy", "Config"),
 					new_section("New file", "ene | startinsert", "Built-in"),
@@ -34,7 +34,7 @@ return {
 					new_section("Session restore", [[lua require("persistence").load()]], "Session"),
 				},
 				content_hooks = {
-					starter.gen_hook.adding_bullet(pad .. "░ ", false),
+					starter.gen_hook.adding_bullet(pad .. "▎  ", false),
 					starter.gen_hook.aligning("center", "center"),
 				},
 			}

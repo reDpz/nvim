@@ -32,6 +32,5 @@ return {
             } ]]
         })
 
-        -- set lualine theme
     end
 }
