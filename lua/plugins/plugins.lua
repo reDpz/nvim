@@ -48,7 +48,7 @@ return {
 						package_pending = "➜",
 						package_uninstalled = "✗"
 					},
-					border = "",
+					border = "single",
 				}
 			})
 		end
