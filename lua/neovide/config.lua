@@ -1,4 +1,4 @@
-vim.o.guifont = "CaskaydiaCove Nerd Font Mono:h10"
+vim.o.guifont = "CaskaydiaCove Nerd Font Mono:h13"
 
 -- padding
 -- local padpx = 0

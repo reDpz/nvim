@@ -1,8 +1,13 @@
 local load = true;
-local events = {"VeryLazy"}
+local events = { "VeryLazy" }
 local cmd = {}
 
 return {
+  {
+    "nyoom-engineering/oxocarbon.nvim",
+    lasy = load,
+    event = events,
+  },
   {
     "folke/tokyonight.nvim",
     lazy = load,
@@ -23,7 +28,7 @@ return {
           -- Value is any valid attr-list value for `:help nvim_set_hl`
           comments = { italic = true },
           keywords = { italic = true },
-          functions = {italic = true},
+          functions = { italic = true },
           variables = {},
           -- Background styles. Can be "dark", "transparent" or "normal"
           sidebars = "dark",              -- style for sidebars, see below
@@ -47,7 +52,12 @@ return {
 
         -- borderless telescope
         on_highlights = function(hl, c)
+          hl.TreesitterContext = {
+            link = "Normal"
+          }
+
           local prompt = "#2d3149"
+
           hl.TelescopeNormal = {
             bg = c.bg_dark,
             fg = c.fg_dark,
@@ -75,6 +85,7 @@ return {
             bg = c.bg_dark,
             fg = c.bg_dark,
           }
+
         end,
       })
     end

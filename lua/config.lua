@@ -9,7 +9,7 @@ set breakindent " when having lines that go across multiple lines and they are i
 " example of breakindent
     " dawJDLKAJJJJJJJJJJJJJJJJJJJJjjjjjjjjj jjjjjjjjjjjjJJJJJJJJJJJJJJJjjjjjjjjjjjjJ JJJJJJ JJJJ jjjjjj jjjjjjjjjjJ JJJJjjjjjjjjJJJjjjJjjjJJJjjjJJjjJJJjjjjjjjjjjjJJjjJJjjJJjjJJjjJJjjjjjjjjjj
 
-set foldenable 
+set foldenable
 set ignorecase " when searching for something it ignores the case
 set undofile " remember changes across sessions
 
@@ -32,13 +32,13 @@ vim.o.linebreak = true;
 
 
 -- automatically change the directory
-vim.o.autochdir=true
+vim.o.autochdir = true
 
 -- show only on statusline for all splits
 vim.o.laststatus = 3
 
 if vim.loop.os_uname().sysname == "Windows_NT" then
-    vim.cmd([[set shell=C:\msys64\shellnvim.cmd]])
+  vim.cmd([[set shell=C:\msys64\shellnvim.cmd]])
 end
 
 

@@ -80,7 +80,6 @@ return {
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		main = "ibl",
-		dependencies = {"Mofiqul/vscode.nvim", "Shatur/neovim-ayu",},
 		lazy = true,
 		event = {"VeryLazy"},
 		enabled = true,

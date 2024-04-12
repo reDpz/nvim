@@ -4,4 +4,7 @@ return {
   opts = {
     -- add any custom options here
   }
+  --[[ config = function()
+    vim.api.nvim_set_keymap("n", "<leader>qs", [[<cmd>lua require("persistence").load()<cr>, {})
+  end ]]
 }
