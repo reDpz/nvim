@@ -6,10 +6,12 @@ return {
     config = function()
         require("huez").setup({})
 
-        local colorscheme = require("huez.api").get_colorscheme()
-        vim.cmd("colorscheme " .. colorscheme)
+        local pickers = require("huez.pickers")
 
-        vim.keymap.set("n", "<leader>co", "<cmd>Huez<CR>", {})
+        vim.keymap.set("n", "<leader>co", pickers.themes, {})
+        vim.keymap.set("n", "<leader>cof", pickers.favorites, {})
+        vim.keymap.set("n", "<leader>col", pickers.live, {})
+        vim.keymap.set("n", "<leader>coe", pickers.ensured, {})
     end,
     dependencies = {
         "nvim-telescope/telescope.nvim",
