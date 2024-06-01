@@ -85,7 +85,6 @@ return {
             bg = c.bg_dark,
             fg = c.bg_dark,
           }
-
         end,
       })
     end
@@ -208,5 +207,11 @@ return {
         end
       }
     },
+  },
+  {
+    "notken12/base46-colors",
+    lazy = load,
+    event = events,
+    enabled = false,
   }
 }
