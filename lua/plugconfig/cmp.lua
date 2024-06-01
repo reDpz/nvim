@@ -49,7 +49,8 @@ cmp.setup({
           -- menu
           vim_item.mode = 'symbol'
           -- Kind icons
-          vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
+          -- This concatonates the icons with the name of the item kind
+          vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind)
           -- Source
           vim_item.menu = ({
             buffer = "[Buf]",
@@ -66,10 +67,10 @@ cmp.setup({
   }, ]]
   formatting = {
     format = function(_, vim_item)
-      local kind = require("lspkind").cmp_format({ mode = "symbol_text", maxwidth = 50 })(entry, vim_item)
+      local kind = require("lspkind").cmp_format({ mode = "symbol", maxwidth = 50 })(entry, vim_item)
       local strings = vim.split(kind.kind, "%s", { trimempty = true })
       kind.kind = " " .. (strings[1] or "") .. " "
-      kind.menu = "    [" .. (strings[2] or "") .. "]"
+      kind.menu = "    " .. (strings[2] or "") .. ""
       return kind
     end
     ,
