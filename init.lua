@@ -196,8 +196,7 @@ require("lazy").setup("plugins", {
 		-- Track each new require in the Lazy profiling tab
 		require = false,
 	},
-}
-)
+})
 require("plugconfig.treesitter")
 require("plugconfig.zero")
 require("plugconfig.cmp")
@@ -228,7 +227,7 @@ end ]]
 -- prevent keys being overwritten
 -- require('lazy').setup(require('plugins.
 
--- lualine
+-- truncate the mode sign in lualine to 1 character
 require("lualine").setup({
 	sections = {
 		lualine_a = {
