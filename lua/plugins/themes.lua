@@ -1,11 +1,12 @@
 local load = true
-local events = { "VeryLazy" }
+local events = {}
+-- local events = { "VeryLazy" }
 local cmd = {}
 
 return {
 	{
 		"nyoom-engineering/oxocarbon.nvim",
-		lasy = load,
+		lazy = load,
 		event = events,
 	},
 	{
@@ -221,9 +222,15 @@ return {
 		config = function()
 			require("oldworld").setup({
 				styles = {
-					booleans = { italic = true, bold = true },
+					comments = { italic = true },
+					keywords = { italic = true },
+					identifiers = { italic = true },
+					functions = { italic = true },
+					variables = {},
+					booleans = { italic = true },
 				},
 			})
+			vim.api.nvim_set_hl(0, "String", { fg = "#90b99f", italic = true })
 		end,
 	},
 }
