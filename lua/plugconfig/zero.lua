@@ -44,8 +44,8 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 -- Setup language servers.
 local lspconfig = require('lspconfig')
 lspconfig.pyright.setup {}
--- lspconfig.rnix.setup{}
-lspconfig.clangd.setup{}
+lspconfig.nil_ls.setup {}
+lspconfig.clangd.setup {}
 lspconfig.rust_analyzer.setup {
   -- Server-specific settings. See `:help lspconfig-setup`
   settings = {
@@ -86,7 +86,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = { 'jdtls'  }
+  ensure_installed = { 'jdtls' }
 })
 
 --[[ require('mason-lspconfig').setup_handlers({
@@ -99,7 +99,7 @@ require('mason-lspconfig').setup({
 
 
 -- all servers
-local servers = {'clangd'}
+local servers = { 'clangd' }
 for _, lsp2 in pairs(servers) do
   require('lspconfig')[lsp2].setup {
     on_attach = on_attach,

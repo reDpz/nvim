@@ -8,8 +8,8 @@ return {
 		end,
 		opts = {
 			window = {
-				border = 'single',
-			}
-		}
-	}
+				border = "single",
+			},
+		},
+	},
 }

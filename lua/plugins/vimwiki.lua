@@ -1,5 +1,4 @@
-return{
-    'vimwiki/vimwiki',
-    enabled = false,
-
+return {
+	"vimwiki/vimwiki",
+	enabled = false,
 }

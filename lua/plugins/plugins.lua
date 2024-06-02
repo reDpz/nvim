@@ -2,43 +2,44 @@ return {
 	"folke/which-key.nvim",
 	{
 		"nvim-treesitter/nvim-treesitter",
-		build = ":TSUpdate"
+		build = ":TSUpdate",
 	},
-	{ 'filNaj/tree-setter' },
+	{ "filNaj/tree-setter" },
 	{
-		'neovim/nvim-lspconfig'
-	},
-	{
-		'hrsh7th/cmp-nvim-lsp',
-		event = {"VeryLazy"},
+		"neovim/nvim-lspconfig",
 	},
 	{
-		event = {"VeryLazy"},
-		'hrsh7th/cmp-buffer'
+		"hrsh7th/cmp-nvim-lsp",
+		event = { "VeryLazy" },
 	},
 	{
-		event = {"VeryLazy"},
-		'hrsh7th/cmp-path'
+		event = { "VeryLazy" },
+		"hrsh7th/cmp-buffer",
 	},
 	{
-		event = {"VeryLazy"},
-		'hrsh7th/cmp-cmdline'
+		event = { "VeryLazy" },
+		"hrsh7th/cmp-path",
 	},
 	{
-		event = {"VeryLazy"},
-		'hrsh7th/nvim-cmp',
-
+		event = { "VeryLazy" },
+		"hrsh7th/cmp-cmdline",
+	},
+	{
+		event = { "VeryLazy" },
+		"hrsh7th/nvim-cmp",
 	},
 
 	{
 		"windwp/nvim-autopairs",
-		config = function() require("nvim-autopairs").setup {} end
+		config = function()
+			require("nvim-autopairs").setup({})
+		end,
 	},
 	{
 		"williamboman/mason.nvim",
 		lazy = false,
 		build = function()
-			pcall(vim.cmd, 'MasonUpdate')
+			pcall(vim.cmd, "MasonUpdate")
 		end,
 		config = function()
 			require("mason").setup({
@@ -46,32 +47,32 @@ return {
 					icons = {
 						package_installed = "✓",
 						package_pending = "➜",
-						package_uninstalled = "✗"
+						package_uninstalled = "✗",
 					},
 					border = "single",
-				}
+				},
 			})
-		end
+		end,
 	},
 	{
-		'VonHeikemen/lsp-zero.nvim',
-		branch = 'v2.x',
+		"VonHeikemen/lsp-zero.nvim",
+		branch = "v2.x",
 		dependencies = {
 			-- LSP Support
-			{ 'neovim/nvim-lspconfig' }, -- Required
-			{                   -- Optional
-				'williamboman/mason.nvim',
+			{ "neovim/nvim-lspconfig" }, -- Required
+			{ -- Optional
+				"williamboman/mason.nvim",
 				build = function()
-					pcall(vim.cmd, 'MasonUpdate')
+					pcall(vim.cmd, "MasonUpdate")
 				end,
 			},
-			{ 'williamboman/mason-lspconfig.nvim' }, -- Optional
+			{ "williamboman/mason-lspconfig.nvim" }, -- Optional
 
 			-- Autocompletion
-			{ 'hrsh7th/nvim-cmp' }, -- Required
-			{ 'hrsh7th/cmp-nvim-lsp' }, -- Required
-			{ 'L3MON4D3/LuaSnip' }, -- Required
-		}
+			{ "hrsh7th/nvim-cmp" }, -- Required
+			{ "hrsh7th/cmp-nvim-lsp" }, -- Required
+			{ "L3MON4D3/LuaSnip" }, -- Required
+		},
 	},
 
 	-- less important stuff
@@ -81,7 +82,7 @@ return {
 		"lukas-reineke/indent-blankline.nvim",
 		main = "ibl",
 		lazy = true,
-		event = {"VeryLazy"},
+		event = { "VeryLazy" },
 		enabled = true,
 		--[[ opts = {
 			show_current_context = true,
@@ -93,8 +94,7 @@ return {
 				"NonText",
 			}
 
-
-			require("ibl").setup {
+			require("ibl").setup({
 				-- show_current_context = true,
 				-- show_current_context_start = false,
 				--[[ indent = {
@@ -114,18 +114,17 @@ return {
 					show_start = true,
 					char = "▎",
 					-- highlight = "Normal",
-				}
-			}
-		end
+				},
+			})
+		end,
 	},
 	{
 		"nmac427/guess-indent.nvim",
 		config = function()
-			require('guess-indent').setup {}
-		end
+			require("guess-indent").setup({})
+		end,
 	},
 	{
-		'ThePrimeagen/vim-be-good'
+		"ThePrimeagen/vim-be-good",
 	},
-
 }

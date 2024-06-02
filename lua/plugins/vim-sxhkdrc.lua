@@ -1,3 +1,3 @@
-return{{
-    'kovetskiy/sxhkd-vim'
-}}
+return { {
+	"kovetskiy/sxhkd-vim",
+} }

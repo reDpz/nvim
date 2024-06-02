@@ -1,6 +1,6 @@
 return {
-'NvChad/nvim-colorizer.lua',
+	"NvChad/nvim-colorizer.lua",
 	config = function()
-		require'colorizer'.setup()
-	end
+		require("colorizer").setup()
+	end,
 }

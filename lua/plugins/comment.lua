@@ -8,18 +8,18 @@ return {
 				block = "gb",
 			},
 			opleader = {
-				line = "gcc"
-			}
+				line = "gcc",
+			},
 		},
 		lazy = false,
 		-- event = "LazyFile"
 		-- config = function()
-			-- require('Comment').setup({
-				-- toggler = {
-					-- line = '<leader>/',
-					-- block = '<leader>g/'
-				-- }}
-			-- )
+		-- require('Comment').setup({
+		-- toggler = {
+		-- line = '<leader>/',
+		-- block = '<leader>g/'
+		-- }}
+		-- )
 		-- end
-	}
+	},
 }

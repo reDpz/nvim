@@ -1,29 +1,29 @@
 return {
-    'akinsho/bufferline.nvim',
-    event = { "UIEnter" },
-    version = "*",
-    -- colourscheme dependency needs to be added otherwise it wont work
-    dependencies = { 'Mofiqul/vscode.nvim', 'nvim-tree/nvim-web-devicons' },
-    config = function()
-        require("bufferline").setup({
-            options = {
-                -- separator_style = 'block',
-                buffer_close_icon = "x",
-                close_command = "bdelete %d",
-                close_icon = "x",
-                indicator = {
-                    style = "icon",
-                    icon = " ",
-                },
-                left_trunc_marker = "",
-                modified_icon = "●",
-                offsets = { { filetype = "NvimTree", text = "EXPLORER", text_align = "center" } },
-                right_mouse_command = "bdelete! %d",
-                right_trunc_marker = "",
-                show_close_icon = false,
-                show_tab_indicators = true,
-            },
-            --[[ highlights = {
+	"akinsho/bufferline.nvim",
+	event = { "UIEnter" },
+	version = "*",
+	-- colourscheme dependency needs to be added otherwise it wont work
+	dependencies = { "Mofiqul/vscode.nvim", "nvim-tree/nvim-web-devicons" },
+	config = function()
+		require("bufferline").setup({
+			options = {
+				-- separator_style = 'block',
+				buffer_close_icon = "x",
+				close_command = "bdelete %d",
+				close_icon = "x",
+				indicator = {
+					style = "icon",
+					icon = " ",
+				},
+				left_trunc_marker = "",
+				modified_icon = "●",
+				offsets = { { filetype = "NvimTree", text = "EXPLORER", text_align = "center" } },
+				right_mouse_command = "bdelete! %d",
+				right_trunc_marker = "",
+				show_close_icon = false,
+				show_tab_indicators = true,
+			},
+			--[[ highlights = {
                 fill = {
                     fg = { attribute = "fg", highlight = "Normal" },
                     bg = { attribute = "bg", highlight = "WinSeparator" },
@@ -65,6 +65,6 @@ return {
                     bg = { attribute = "bg", highlight = "Normal" },
                 },
             }, ]]
-        })
-    end
+		})
+	end,
 }
