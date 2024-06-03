@@ -12,6 +12,7 @@ return {
 				java = { "google-java-format" },
 				cpp = { { "clang-format" } },
 				nix = { "nixpkgs_fmt" },
+				rust = { "rustfmt" },
 			},
 			format_on_save = {
 				-- These options will be passed to conform.format()
