@@ -1,6 +1,6 @@
 local load = true
 local events = {}
--- local events = { "VeryLazy" }
+local events = { "VeryLazy" }
 local cmd = {}
 
 return {
