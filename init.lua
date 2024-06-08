@@ -242,6 +242,7 @@ require("lualine").setup({
 })
 
 require("scripts")
+require("godot")
 
 -- it was getting overwritten by something and im lazy so...
 -- keymap('n', '<C-t>', '<cmd>ToggleTerm size=19<cr>')

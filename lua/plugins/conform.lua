@@ -13,6 +13,7 @@ return {
 				cpp = { { "clang-format" } },
 				nix = { "nixpkgs_fmt" },
 				rust = { "rustfmt" },
+				-- gdscript = { "gdformat" },
 			},
 			format_on_save = {
 				-- These options will be passed to conform.format()
