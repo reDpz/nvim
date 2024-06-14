@@ -11,23 +11,8 @@ local on_attach = lsp.on_attach
 -- (Optional) Configure lua language server for neovim
 require("lspconfig").lua_ls.setup(lsp.nvim_lua_ls())
 
---[[ require('lspconfig').ltex.setup({
-  filetypes = { "vimwiki", "markdown", "md", "pandoc", "vimwiki.markdown.pandoc" },
-  flags = { debounce_text_changes = 300 },
-  settings = {
-    ltex = {
-      language = "en-GB",
-    }
-  },
-}) ]]
-
---[[ require('lspconfig').grammarly.setup({
-  filetypes = { "vimwiki", "markdown", "md", "pandoc", "vimwiki.markdown.pandoc" },
-  flags = { debounce_text_changes = 300 },
-  settings = {
-      language = "en-GB",
-  },
-}) ]]
+-- inlay hints
+-- vim.lsp.inlay_hint.enable()
 
 lsp.skip_server_setup({ "jdtls" })
 
@@ -52,15 +37,12 @@ lspconfig.yamlls.setup({
 		},
 	},
 })
+lspconfig.csharp_ls.setup({})
 
 lspconfig.gdscript.setup(capabilities)
 
-lspconfig.rust_analyzer.setup({
-	-- Server-specific settings. See `:help lspconfig-setup`
-	settings = {
-		["rust-analyzer"] = {},
-	},
-})
+-- not setup due to rustaceanvim
+-- lspconfig.rust_analyzer.setup({})
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions

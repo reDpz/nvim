@@ -123,6 +123,7 @@ return {
 	},
 	{
 		"navarasu/onedark.nvim",
+		enabled = false,
 		lazy = load,
 		event = events,
 		-- cmd = cmd,
@@ -136,7 +137,20 @@ return {
 		"olimorris/onedarkpro.nvim",
 		lazy = load,
 		event = events,
-		-- cmd = cmd,
+		config = function()
+			require("onedarkpro").setup({
+				styles = {
+					methods = "italic",
+					strings = "italic",
+					comments = "italic",
+					conditionals = "italic",
+					keywords = "italic",
+				},
+				options = {
+					-- cursorline = true,
+				},
+			})
+		end,
 	},
 	{
 		"catppuccin/nvim",
