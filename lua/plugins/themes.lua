@@ -5,6 +5,17 @@ local cmd = {}
 
 return {
 	{
+		"cdmill/neomodern.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("neomodern").setup({
+				-- optional configuration here
+			})
+			-- require("neomodern").load()
+		end,
+	},
+	{
 		"nyoom-engineering/oxocarbon.nvim",
 		lazy = load,
 		event = events,
@@ -45,7 +56,8 @@ return {
 				--- function will be called with a ColorScheme table
 				---@param colors ColorScheme
 				on_colors = function(colors)
-					colors.bg = "#1d1d25"
+					-- colors.bg = "#1d1d25"
+					colors.bg = "#000000"
 				end,
 
 				--- You can override specific highlights to use other groups or a hex color
