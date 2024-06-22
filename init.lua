@@ -228,7 +228,7 @@ end ]]
 -- require('lazy').setup(require('plugins.
 
 -- truncate the mode sign in lualine to 1 character
-require("lualine").setup({
+--[[ require("lualine").setup({
 	sections = {
 		lualine_a = {
 			{
@@ -239,10 +239,10 @@ require("lualine").setup({
 			},
 		},
 	},
-})
+}) ]]
 
 require("scripts")
--- require("godot")
+require("godot")
 
 -- it was getting overwritten by something and im lazy so...
 -- keymap('n', '<C-t>', '<cmd>ToggleTerm size=19<cr>')
